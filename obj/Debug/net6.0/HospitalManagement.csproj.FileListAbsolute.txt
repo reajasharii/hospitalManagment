@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net6.0\HospitalManagement.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net6.0\HospitalManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net6.0\HospitalManagement.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net6.0\HospitalManagement.AssemblyInfo.cs
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net6.0\HospitalManagement.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net6.0\HospitalManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net6.0\HospitalManagement.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net6.0\HospitalManagement.RazorAssemblyInfo.cs
