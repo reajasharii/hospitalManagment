@@ -135,3 +135,4 @@ C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net8.0\ref
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.pdb
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.genruntimeconfig.cache
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net8.0\ref\HospitalManagement.dll
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.sourcelink.json
