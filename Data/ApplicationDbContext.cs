@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using HospitalManagement.Models; // Import your model namespace
+using HospitalManagement.Models; 
+
 
 namespace HospitalManagement.Data
 {
