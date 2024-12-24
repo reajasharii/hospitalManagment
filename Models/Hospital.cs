@@ -1,20 +1,28 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace HospitalManagement.Models
 {
     public class Hospital
     {
-        [Key]
         public int Id { get; set; } // Primary Key
 
         [Required]
-        public string Name { get; set; } = string.Empty; // Initialized to avoid null issues
+        [StringLength(100)]
+        public string Name { get; set; } // Name of the hospital
 
         [Required]
-        public string Address { get; set; } = string.Empty;
+        [StringLength(200)]
+        public string Address { get; set; } // Hospital's address
 
-        public string City { get; set; } = string.Empty;
+        [Required]
+        [StringLength(100)]
+        public string City { get; set; } // City where the hospital is located
 
-        public string Phone { get; set; } = string.Empty;
+        [Required]
+        [Phone]
+        public string Phone { get; set; } // Phone number of the hospital
+
+       
     }
 }

@@ -1,0 +1,37 @@
+@model IEnumerable<HospitalManagement.Models.Doctor>
+
+@{
+    ViewData["Title"] = "Manage Doctors";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a class="btn btn-primary" href="@Url.Action("CreateDoctor")">Create New Doctor</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Speciality</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doctor in Model)
+        {
+            <tr>
+                <td>@doctor.FullName</td>
+                <td>@doctor.Email</td>
+                <td>@doctor.Specialty</td>
+                <td>
+                    <a asp-controller="Admin" asp-action="EditDoctor" asp-route-doctorId="@doctor.Id">Edit</a>
+
+                    <a class="btn btn-danger" href="@Url.Action("DeleteDoctor", new { id = doctor.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

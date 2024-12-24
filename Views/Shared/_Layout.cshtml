@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - HospitalManagement</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sidebar.css" />
     <link rel="stylesheet" href="~/HospitalManagement.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -57,9 +58,32 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Sidebar based on user role -->
+                @if (User.Identity?.IsAuthenticated ?? false)
+                {
+                    @if (User.IsInRole("Admin"))
+                    {
+                        @await Html.PartialAsync("Sidebar/AdminSideBar")
+                    }
+                    else if (User.IsInRole("Doctor"))
+                    {
+                        @await Html.PartialAsync("Sidebar/DoctorSideBar")
+                    }
+                    else if (User.IsInRole("Patient"))
+                    {
+                        @await Html.PartialAsync("Sidebar/PatientSideBar")
+                    }
+                }
+            </div>
+            <div class="col-md-9">
+                <!-- Main content area -->
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">

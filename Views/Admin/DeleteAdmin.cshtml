@@ -1,0 +1,22 @@
+@model HospitalManagement.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "Delete Admin";
+}
+
+<h2>Delete Admin</h2>
+
+<div>
+    <h3>Are you sure you want to delete this admin?</h3>
+    <p><strong>Name:</strong> @Model.FullName @Model.Surname</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+
+    <!-- Form for the actual delete action (POST method) -->
+    <form asp-action="DeleteAdmin" asp-route-id="@Model.Id" method="post">
+        <!-- Hidden input for the admin Id -->
+        <input type="hidden" name="id" value="@Model.Id" />
+        
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="ManageAdmins" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

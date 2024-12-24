@@ -1,0 +1,67 @@
+/* Sidebar Styling */
+.sidebar {
+    background-color: #f8f9fa;
+    border-right: 2px solid #ddd;
+    padding: 15px;
+    height: 100vh; /* Full height of the page */
+    position: fixed;
+    width: 250px;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* For individual sidebar items */
+.sidebar .list-group-item {
+    border: none;
+    padding: 10px 20px;
+}
+
+.sidebar .list-group-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+
+/* Hover effect for links */
+.sidebar .list-group-item a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* For Admin Sidebar */
+.admin-sidebar .list-group-item {
+    background-color: #e9ecef;
+}
+
+.admin-sidebar .list-group-item a {
+    color: #343a40;
+}
+
+/* For Doctor Sidebar */
+.doctor-sidebar .list-group-item {
+    background-color: #f1f1f1;
+}
+
+.doctor-sidebar .list-group-item a {
+    color: #495057;
+}
+
+/* For Patient Sidebar */
+.patient-sidebar .list-group-item {
+    background-color: #f9f9f9;
+}
+
+.patient-sidebar .list-group-item a {
+    color: #6c757d;
+}
+
+/* Sidebar responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+}

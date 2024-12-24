@@ -1,0 +1,56 @@
+@using HospitalManagement.Models
+
+@model HospitalManagement.Models.EditDoctorViewModel
+
+@{
+    ViewData["Title"] = "Edit Doctor";
+}
+
+<h2>Edit Doctor</h2>
+
+<form method="post">
+    @Html.AntiForgeryToken()
+
+    <!-- Hidden field for the doctor's ID -->
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div class="form-group">
+        <label for="FullName">Full Name</label>
+        <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.FullName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Surname">Surname</label>
+        <input type="text" class="form-control" id="Surname" name="Surname" value="@Model.Surname" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Specialty">Specialty</label>
+        <input type="text" class="form-control" id="Specialty" name="Specialty" value="@Model.Specialty" required />
+    </div>
+
+    <div class="form-group">
+        <label for="LicenseNumber">License Number</label>
+        <input type="text" class="form-control" id="LicenseNumber" name="LicenseNumber" value="@Model.LicenseNumber" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" name="Password" />
+        <small class="form-text text-muted">Leave blank to keep the current password.</small>
+    </div>
+
+    <div class="form-group">
+        <label for="ConfirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<a href="@Url.Action("ManageDoctors")" class="btn btn-secondary mt-3">Back to Manage Doctors</a>

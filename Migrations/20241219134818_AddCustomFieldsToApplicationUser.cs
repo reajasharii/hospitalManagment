@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace HospitalManagement.Migrations.HospitalDb
+namespace HospitalManagement.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class AddCustomFieldsToApplicationUser : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

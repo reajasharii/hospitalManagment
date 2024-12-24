@@ -1,0 +1,28 @@
+@model IEnumerable<HospitalManagement.Models.Patient>
+
+<h2>Manage Patients</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Medical History</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patient in Model)
+        {
+            <tr>
+                <td>@patient.FullName @patient.Surname</td>
+                <td>@patient.MedicalHistory</td>
+                <td>
+                    <a asp-action="EditPatient" asp-route-id="@patient.Id" class="btn btn-primary">Edit</a>
+                    <a asp-action="DeletePatient" asp-route-id="@patient.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="CreatePatient" class="btn btn-success">Create New Patient</a>
