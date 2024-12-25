@@ -1,10 +1,16 @@
+
 using System;
 using System.ComponentModel.DataAnnotations;
 
+
+
 namespace HospitalManagement.ViewModels
 {
-    public class CreatePatientViewModel
+public class EditPatientViewModel
     {
+        [Required]
+        public string Id { get; set; }
+
         [Required]
         public string FullName { get; set; }
 
@@ -15,14 +21,8 @@ namespace HospitalManagement.ViewModels
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
-
- 
+       
 
         public string MedicalHistory { get; set; }
     }
-
-   
-}
+    }

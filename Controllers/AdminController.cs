@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using static HospitalManagement.ViewModels.CreatePatientViewModel;
 
 
 namespace HospitalManagement.Controllers
@@ -16,6 +17,7 @@ namespace HospitalManagement.Controllers
     {
             private readonly ApplicationDbContext _context;
          private readonly UserManager<ApplicationUser> _userManager;   
+         
 
         public AdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
@@ -23,20 +25,20 @@ namespace HospitalManagement.Controllers
             _userManager = userManager;
         }
 
-        // Manage Admins - List all users with Admin role
+      
         public async Task<IActionResult> ManageAdmins()
         {
             var admins = await _userManager.GetUsersInRoleAsync("Admin");
             return View("ManageAdmins", admins);
         }
 
-        // Create Admin - GET
+     
         public IActionResult CreateAdmin()
         {
             return View("CreateAdmin");
         }
 
-        // Create Admin - POST
+      
  [HttpPost]
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> CreateAdmin(CreateAdminViewModel model)
@@ -55,12 +57,11 @@ public async Task<IActionResult> CreateAdmin(CreateAdminViewModel model)
 
         if (result.Succeeded)
         {
-            // Assign the Admin role
+           
             await _userManager.AddToRoleAsync(admin, "Admin");
             return RedirectToAction(nameof(ManageAdmins));
         }
 
-        // Handle errors
         foreach (var error in result.Errors)
         {
             ModelState.AddModelError(string.Empty, error.Description);
@@ -77,9 +78,7 @@ public async Task<IActionResult> CreateAdmin(CreateAdminViewModel model)
 
 
 
-        // Edit Admin - GET// Edit Admin - GET
-
-// Edit Admin - GET
+        
 public async Task<IActionResult> EditAdmin(string id)
 {
     if (id == null)
@@ -98,14 +97,14 @@ public async Task<IActionResult> EditAdmin(string id)
         Id = admin.Id,
         FullName = admin.FullName,
         Email = admin.Email,
-        Password = "",  // Empty password field
-        ConfirmPassword = ""  // Empty confirm password field
+        Password = "",  
+        ConfirmPassword = ""  
     };
 
     return View(model);
 }
 
-// Edit Admin - POST
+
 [HttpPost]
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> EditAdmin(EditAdminViewModel model)
@@ -118,11 +117,10 @@ public async Task<IActionResult> EditAdmin(EditAdminViewModel model)
             return NotFound();
         }
 
-        // Update fields
         admin.FullName = model.FullName;
         admin.Email = model.Email;
 
-        // Handle password update if provided
+     
         if (!string.IsNullOrEmpty(model.Password))
         {
             var removePasswordResult = await _userManager.RemovePasswordAsync(admin);
@@ -148,7 +146,6 @@ public async Task<IActionResult> EditAdmin(EditAdminViewModel model)
             }
         }
 
-        // Update the admin user
         var result = await _userManager.UpdateAsync(admin);
         if (result.Succeeded)
         {
@@ -169,12 +166,6 @@ public async Task<IActionResult> EditAdmin(EditAdminViewModel model)
 
 
 
-        // Edit Admin - POST
-       
-
-
-
-    // Delete Admin - GET (show confirmation)
 public async Task<IActionResult> DeleteAdmin(string id)
 {
     if (id == null)
@@ -188,10 +179,10 @@ public async Task<IActionResult> DeleteAdmin(string id)
         return NotFound();
     }
 
-    return View(admin); // Pass the admin to the confirmation view
+    return View(admin); 
 }
 
-// Delete Admin - POST (actual deletion)
+
 [HttpPost, ActionName("DeleteAdmin")]
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> DeleteConfirmedAdmin(string id)
@@ -210,42 +201,41 @@ public async Task<IActionResult> DeleteConfirmedAdmin(string id)
     var result = await _userManager.DeleteAsync(admin);
     if (result.Succeeded)
     {
-        return RedirectToAction(nameof(ManageAdmins)); // Redirect to ManageAdmins after successful deletion
+        return RedirectToAction(nameof(ManageAdmins)); 
     }
 
-    // If there are errors, add them to the ModelState and return to the confirmation view
+   
     foreach (var error in result.Errors)
     {
         ModelState.AddModelError(string.Empty, error.Description);
     }
 
-    return View(admin); // If there was an error, return the admin to the confirmation page
+    return View(admin); 
 }
 
 
-        // CRUD Operations for Doctors
+        
     public async Task<IActionResult> ManageDoctors()
 {
     var doctors = await _context.Doctors.ToListAsync();
-    return View(doctors); // Return the list of doctors to the view
+    return View(doctors); 
 }
 
 
-    // Create Doctor - GET (Show the form to create a new doctor)
+   
     public IActionResult CreateDoctor()
     {
         return View();
     }
 
-    // Create Doctor - POST (Save the new doctor to the database)
- // Create Doctor - POST (Save the new doctor to the database)
+    
 [HttpPost]
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> CreateDoctor(CreateDoctorViewModel model)
 {
     if (ModelState.IsValid)
     {
-        // Create ApplicationUser for authentication
+       
         
         var doctorUser = new ApplicationUser
         {
@@ -253,21 +243,21 @@ public async Task<IActionResult> CreateDoctor(CreateDoctorViewModel model)
             Email = model.Email,
             UserName = model.Email,
             Surname = model.Surname,
-             // Use email as the username for the user
+            
         };
 
-        // Create the ApplicationUser in Identity system
+      
         var result = await _userManager.CreateAsync(doctorUser, model.Password);
 
         if (result.Succeeded)
         {
-            // Add the Doctor role
+            
             await _userManager.AddToRoleAsync(doctorUser, "Doctor");
 
-            // Now create the Doctor entity (separate from ApplicationUser)
+           
             var doctor = new Doctor
             {
-                Id = doctorUser.Id,  // Link to ApplicationUser via Id
+                Id = doctorUser.Id,  
                 FullName = model.FullName,
                 Specialty = model.Specialty,
                 LicenseNumber = model.LicenseNumber,
@@ -275,27 +265,26 @@ public async Task<IActionResult> CreateDoctor(CreateDoctorViewModel model)
            
             };
 
-            // Add Doctor to the database
+            
             _context.Doctors.Add(doctor);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(ManageDoctors));  // Redirect after successful creation
+            return RedirectToAction(nameof(ManageDoctors)); 
         }
 
-        // Handle errors during user creation
+        
         foreach (var error in result.Errors)
         {
             ModelState.AddModelError(string.Empty, error.Description);
         }
     }
 
-    return View(model);  // Return view with validation errors if any
+    return View(model); 
 }
 
 
 
- // Edit Doctor Action
-// Edit Doctor - GET
+
 [HttpGet]
 public IActionResult EditDoctor(string doctorid)
 {
@@ -330,7 +319,7 @@ public IActionResult EditDoctor(EditDoctorViewModel model)
 
     _context.SaveChanges();
 
-    // After successful edit, redirect to ManageDoctors
+   
     return RedirectToAction("ManageDoctors");
 }
 
@@ -338,28 +327,11 @@ public IActionResult EditDoctor(EditDoctorViewModel model)
 
 
 
-// Edit Doctor - POST
-// [HttpPost]
-// public IActionResult EditDoctor(EditDoctorViewModel model)
-// {
-//     if (!ModelState.IsValid) return View(model);
 
-//     var doctor = _context.Doctors.Find(model.Id);
-//     if (doctor == null) return NotFound();
-
-//     doctor.FullName = model.FullName;
-//     doctor.Surname = model.Surname;
-//     doctor.LicenseNumber = model.LicenseNumber;
-//     doctor.Specialization = model.Specialization;
-
-//     _context.SaveChanges();
-
-//     return RedirectToAction("Index");
-// }
 
   
  
-    // Delete Doctor - GET (Show confirmation to delete a doctor)
+   
     public async Task<IActionResult> DeleteDoctor(string id)
     {
         if (id == null)
@@ -373,10 +345,10 @@ public IActionResult EditDoctor(EditDoctorViewModel model)
             return NotFound();
         }
 
-        return View(doctor); // Pass the doctor to the delete confirmation view
+        return View(doctor); 
     }
 
-    // Delete Doctor - POST (Perform the deletion of a doctor)
+   
    [HttpPost, ActionName("DeleteDoctor")]
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> DeleteConfirmedDoctor(string id)
@@ -398,102 +370,140 @@ public async Task<IActionResult> DeleteConfirmedDoctor(string id)
 
 
 
-        // CRUD Operations for Patients
-        public async Task<IActionResult> ManagePatients()
+        
+public async Task<IActionResult> ManagePatients()
+{
+    
+    var patients = await _context.Patients.ToListAsync();
+
+  
+    return View("ManagePatients", patients);
+}
+
+
+    public IActionResult CreatePatient()
+    {
+    return View("CreatePatient");
+    }
+
+ [HttpPost]
+public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
+{
+    if (ModelState.IsValid)
+    {
+        var patient = new Patient
         {
-            var patients = await _context.Patients.ToListAsync();
-            return View("/Views/ManagePatients.cshtml", patients);
+            FullName = model.FullName,
+            Surname = model.Surname,
+            Email = model.Email,
+            MedicalHistory = model.MedicalHistory,
+           
+        };
+
+        _context.Patients.Add(patient);
+        await _context.SaveChangesAsync();
+
+       
+        return RedirectToAction("ManagePatients");
+    }
+    
+    
+    return View(model);
+}
+    [HttpGet]
+public async Task<IActionResult> EditPatient(string id)
+{
+    
+    var patient = await _context.Patients.FindAsync(id);
+    
+    if (patient == null)
+    {
+        return NotFound();
+    }
+
+    var model = new EditPatientViewModel
+    {
+        FullName = patient.FullName,
+        Surname = patient.Surname,
+        Email = patient.Email,
+        MedicalHistory = patient.MedicalHistory
+    };
+
+    return View(model);
+}
+
+      [HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> EditPatient(string id, EditPatientViewModel model)
+{
+    if (ModelState.IsValid)
+    {
+        var patient = await _context.Patients.FindAsync(id);
+        
+        if (patient == null)
+        {
+            return NotFound();
         }
 
-        public IActionResult CreatePatient()
-        {
-            return View("/Views/ManagePatients/CreatePatient.cshtml");
-        }
+        
+        patient.FullName = model.FullName;
+        patient.Surname = model.Surname;
+        patient.Email = model.Email;
+        patient.MedicalHistory = model.MedicalHistory;
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreatePatient([Bind("FullName,Surname,DateOfBirth,MedicalHistory")] Patient patient)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(patient);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(ManagePatients));
-            }
-            return View("/Views/ManagePatients/CreatePatient.cshtml", patient);
-        }
+       
+        await _context.SaveChangesAsync();
 
-        public async Task<IActionResult> EditPatient(string id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        
+        return RedirectToAction("ManagePatients");
+    }
 
-            var patient = await _context.Patients.FindAsync(id);
-            if (patient == null)
-            {
-                return NotFound();
-            }
-            return View("/Views/ManagePatients/EditPatient.cshtml", patient);
-        }
+    
+    return View(model);
+}
+     
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditPatient(string id, [Bind("Id,FullName,Surname,DateOfBirth,MedicalHistory")] Patient patient)
-        {
-            if (id != patient.Id)
-            {
-                return NotFound();
-            }
+       
+       
+       
+       
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(patient);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!_context.Patients.Any(e => e.Id == patient.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(ManagePatients));
-            }
-            return View("/Views/ManagePatients/EditPatient.cshtml", patient);
-        }
+[HttpGet]
+public async Task<IActionResult> DeletePatient(string id)
+{
+    var patient = await _context.Patients.FindAsync(id);
 
-        public async Task<IActionResult> DeletePatient(string id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+    if (patient == null)
+    {
+        return NotFound();
+    }
 
-            var patient = await _context.Patients.FirstOrDefaultAsync(m => m.Id == id);
-            if (patient == null)
-            {
-                return NotFound();
-            }
+    return View(patient);  
+}
 
-            return View("/Views/ManagePatients/DeletePatient.cshtml", patient);
-        }
 
-        [HttpPost, ActionName("DeletePatient")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmedPatient(string id)
-        {
-            var patient = await _context.Patients.FindAsync(id);
-            _context.Patients.Remove(patient);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(ManagePatients));
-        }
+
+
+
+[HttpPost, ActionName("DeletePatient")]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> DeletePatientConfirmed(string id)
+{
+    var patient = await _context.Patients.FindAsync(id);
+
+    if (patient == null)
+    {
+        return NotFound();
+    }
+
+    _context.Patients.Remove(patient);
+    await _context.SaveChangesAsync();
+
+    return RedirectToAction("ManagePatients"); 
+}
+
+
+
+
     }
 }

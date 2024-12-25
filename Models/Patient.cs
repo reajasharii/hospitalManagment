@@ -15,8 +15,7 @@ namespace HospitalManagement.Models
         [StringLength(100)]
         public string Surname { get; set; } // Patient's surname
 
-        [Required]
-        public DateTime DateOfBirth { get; set; } // Patient's date of birth
+       
 
         [StringLength(500)]
         

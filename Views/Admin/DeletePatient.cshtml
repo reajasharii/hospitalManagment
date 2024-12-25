@@ -1,0 +1,21 @@
+@model HospitalManagement.Models.Patient
+
+<h2>Delete Patient</h2>
+
+<p>Are you sure you want to delete the patient?</p>
+
+<div>
+    <strong>Full Name:</strong> @Model.FullName @Model.Surname
+</div>
+<div>
+    <strong>Email:</strong> @Model.Email
+</div>
+<div>
+    <strong>Medical History:</strong> @Model.MedicalHistory
+</div>
+
+<!-- Ensure that this form is using POST and sends the correct ID -->
+<form asp-action="DeletePatient" asp-route-id="@Model.Id" method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="ManagePatients" class="btn btn-secondary">Cancel</a>
+</form>
