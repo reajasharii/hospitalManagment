@@ -80,42 +80,62 @@ namespace HospitalManagement.Areas.Identity.Pages.Account
                              .ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+       public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+{
+    returnUrl ??= Url.Content("~/");
+
+    if (ModelState.IsValid)
+    {
+        var user = new ApplicationUser 
+        { 
+            UserName = Input.Email, 
+            Email = Input.Email, 
+            FullName = Input.FullName, 
+            Surname = Input.Surname, 
+            MedicalHistory = Input.MedicalHistory 
+        };
+
+        var result = await _userManager.CreateAsync(user, Input.Password);
+
+        if (result.Succeeded)
         {
-            returnUrl ??= Url.Content("~/");
+            _logger.LogInformation("User created a new account with password.");
 
-            if (ModelState.IsValid)
+            // Assign the "Patient" role to the user
+            var roleResult = await _userManager.AddToRoleAsync(user, "Patient");
+
+            if (!roleResult.Succeeded)
             {
-                var user = new ApplicationUser 
-                { 
-                    UserName = Input.Email, 
-                    Email = Input.Email, 
-                    FullName = Input.FullName, 
-                    Surname = Input.Surname, 
-                    MedicalHistory = Input.MedicalHistory 
-                };
-
-                var result = await _userManager.CreateAsync(user, Input.Password);
-
-                if (result.Succeeded)
+                foreach (var error in roleResult.Errors)
                 {
-                    // Automatically sign in the user
-                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
 
-                    // Redirect to the returnUrl (if provided) or to the home page
-                    return LocalRedirect(returnUrl);
-                }
-                else
-                {
-                    // Add errors to the model state
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    }
-                }
+                // If adding the role fails, delete the user to avoid inconsistent state
+                await _userManager.DeleteAsync(user);
+                return Page();
             }
 
-            return Page();
+            // Automatically sign in the user
+            await _signInManager.SignInAsync(user, isPersistent: false);
+
+            // Redirect to the returnUrl (if provided) or to the home page
+            return LocalRedirect(returnUrl);
         }
+
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
+    }
+
+    // Re-fetch external logins if validation fails
+    ExternalLogins = (await _authenticationSchemeProvider.GetAllSchemesAsync())
+                     .Where(s => s.DisplayName != null)
+                     .ToList();
+
+    return Page();
+}
+
     }
 }

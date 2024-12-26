@@ -387,29 +387,56 @@ public async Task<IActionResult> ManagePatients()
     }
 
  [HttpPost]
+[ValidateAntiForgeryToken]
 public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
 {
     if (ModelState.IsValid)
     {
-        var patient = new Patient
+        // Map Patient to ApplicationUser
+        var patientUser = new ApplicationUser
         {
             FullName = model.FullName,
             Surname = model.Surname,
             Email = model.Email,
-            MedicalHistory = model.MedicalHistory,
-           
+            UserName = model.Email // Username is the email
         };
 
-        _context.Patients.Add(patient);
-        await _context.SaveChangesAsync();
+        // Use UserManager to create ApplicationUser
+        var result = await _userManager.CreateAsync(patientUser, model.Password);
 
-       
-        return RedirectToAction("ManagePatients");
+        if (result.Succeeded)
+        {
+            // Assign the Patient role
+            await _userManager.AddToRoleAsync(patientUser, "Patient");
+
+            // Add a new Patient to the database linked by Id
+            var patient = new Patient
+            {
+                Id = patientUser.Id, // Use ApplicationUser ID as foreign key
+                FullName = model.FullName,
+                Surname = model.Surname,
+                Email = model.Email,
+                MedicalHistory = model.MedicalHistory
+            };
+
+            _context.Patients.Add(patient);
+            await _context.SaveChangesAsync();
+
+            // Redirect to ManagePatients view
+            return RedirectToAction("ManagePatients");
+        }
+
+        // Handle errors
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
     }
-    
-    
+
     return View(model);
 }
+
+
     [HttpGet]
 public async Task<IActionResult> EditPatient(string id)
 {
