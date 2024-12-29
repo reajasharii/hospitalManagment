@@ -1,5 +1,8 @@
-<ul class="list-group">
-    <li class="list-group-item">
-        <a href="/Patient/ManageDoctors" class="nav-link">Manage Doctors</a>
-    </li>
-</ul>
+<!-- Patient Sidebar (PatientSideBar.cshtml) -->
+<div class="sidebar">
+    <ul>
+        <li><a href="@Url.Action("ManageAppointments", "Patient")">Manage Appointments</a></li>
+        <li><a href="@Url.Action("ViewMedicalHistory", "Patient")">View Medical History</a></li>
+        <li><a href="@Url.Action("MyAccount", "Patient")">My Account</a></li> <!-- New feature -->
+    </ul>
+</div>
