@@ -10,64 +10,64 @@ using Microsoft.AspNetCore.Mvc;
 public class PatientController : Controller
 {
     private readonly ApplicationDbContext _context;
-        private readonly UserManager<ApplicationUser> _userManager;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-        public PatientController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
-        {
-            _context = context;
-            _userManager = userManager;
-        }
-
-        // Other actions...
-
-       [Authorize]
-public async Task<IActionResult> PatientAccountView()
-{
-    var user = await _userManager.GetUserAsync(User);
-    if (user == null)
+    public PatientController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
     {
-        return NotFound();
+        _context = context;
+        _userManager = userManager;
     }
 
-    var model = new EditAccountViewModel
+    [HttpGet]
+    [HttpGet]
+public async Task<IActionResult> PatientAccountView()
+
     {
-        FullName = user.FullName,
-        Surname = user.Surname,
-        Email = user.Email
-    };
-
-    return View("PatientAccountView", model); // Explicitly specify the view
-}
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> MyAccount(EditAccountViewModel model)
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
         {
-            if (ModelState.IsValid)
+            return NotFound();
+        }
+
+        var model = new EditAccountViewModel
+        {
+            FullName = user.FullName,
+            Surname = user.Surname,
+            Email = user.Email
+        };
+
+        return View(model);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> PatientAccountView(EditAccountViewModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
             {
-                var user = await _userManager.GetUserAsync(User);
-                if (user == null)
-                {
-                    return NotFound();
-                }
-
-                user.FullName = model.FullName;
-                user.Surname = model.Surname;
-                user.Email = model.Email;
-
-                var result = await _userManager.UpdateAsync(user);
-                if (result.Succeeded)
-                {
-                    TempData["SuccessMessage"] = "Account updated successfully!";
-                    return RedirectToAction("PatientAccountView");
-                }
-
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
+                return NotFound();
             }
 
-            return View("PatientAccountView",model);
+            user.FullName = model.FullName;
+            user.Surname = model.Surname;
+            user.Email = model.Email;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+            {
+                TempData["SuccessMessage"] = "Account updated successfully!";
+                return RedirectToAction("PatientAccountView");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
         }
+
+        return View(model);
+    }
 }

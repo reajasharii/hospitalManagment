@@ -5,26 +5,27 @@
 @using (Html.BeginForm("PatientAccountView", "Patient", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
+
     <div>
         <label for="FullName">Full Name:</label>
-        @Html.TextBoxFor(m => m.FullName)
+        @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
     </div>
     <div>
         <label for="Surname">Surname:</label>
-        @Html.TextBoxFor(m => m.Surname)
+        @Html.TextBoxFor(m => m.Surname, new { @class = "form-control" })
     </div>
     <div>
         <label for="Email">Email:</label>
-        @Html.TextBoxFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
     </div>
     <div>
-        <input type="submit" value="Save Changes" />
+        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
     </div>
 }
 
 @if (TempData["SuccessMessage"] != null)
 {
-    <div class="alert alert-success">
+    <div class="alert alert-success mt-3">
         @TempData["SuccessMessage"]
     </div>
 }
