@@ -1,0 +1,36 @@
+@model List<HospitalManagement.ViewModels.DoctorViewModel>
+
+<h2>Connect to a Doctor</h2>
+
+@if (Model.Any())
+{
+    foreach (var doctorViewModel in Model)
+    {
+        var isConnected = doctorViewModel.IsConnected;
+
+        <div class="doctor-card">
+            <h3>@doctorViewModel.Doctor.FullName</h3>
+            <p>Specialty: @doctorViewModel.Doctor.Specialty</p>
+
+            @if (isConnected)
+            {
+                <p>You are already connected to this doctor.</p>
+                <form asp-action="DisconnectFromDoctor" method="post">
+                    <input type="hidden" name="doctorId" value="@doctorViewModel.Doctor.Id" />
+                    <button type="submit" class="btn btn-danger">Disconnect</button>
+                </form>
+            }
+            else
+            {
+                <form asp-action="ConnectToDoctor" method="post">
+                    <input type="hidden" name="doctorId" value="@doctorViewModel.Doctor.Id" />
+                    <button type="submit" class="btn btn-primary">Connect</button>
+                </form>
+            }
+        </div>
+    }
+}
+else
+{
+    <p>No doctors are currently available.</p>
+}

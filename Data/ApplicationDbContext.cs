@@ -19,22 +19,28 @@ namespace HospitalManagement.Data
      
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+{
+    base.OnModelCreating(modelBuilder);
 
-            // Many-to-many relationship between Patient and Doctor
-            modelBuilder.Entity<PatientDoctor>()
-                .HasKey(pd => new { pd.PatientId, pd.DoctorId });
+    modelBuilder.Entity<PatientDoctor>()
+        .HasKey(pd => new { pd.PatientId, pd.DoctorId });
 
-            modelBuilder.Entity<PatientDoctor>()
-                .HasOne(pd => pd.Patient)
-                .WithMany(p => p.PatientDoctors)
-                .HasForeignKey(pd => pd.PatientId);
+    modelBuilder.Entity<PatientDoctor>()
+        .HasOne(pd => pd.Patient)
+        .WithMany(p => p.PatientDoctors)
+        .HasForeignKey(pd => pd.PatientId);
 
-            modelBuilder.Entity<PatientDoctor>()
-                .HasOne(pd => pd.Doctor)
-                .WithMany(d => d.PatientDoctors)
-                .HasForeignKey(pd => pd.DoctorId);
-        }
+    modelBuilder.Entity<PatientDoctor>()
+        .HasOne(pd => pd.Doctor)
+        .WithMany(d => d.PatientDoctors)
+        .HasForeignKey(pd => pd.DoctorId);
+
+    // Optional: Add indices for FullName columns to optimize searching by name
+    modelBuilder.Entity<PatientDoctor>()
+        .HasIndex(pd => pd.PatientFullName);
+    modelBuilder.Entity<PatientDoctor>()
+        .HasIndex(pd => pd.DoctorFullName);
+}
+
     }
 }

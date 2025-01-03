@@ -1,0 +1,15 @@
+@model IEnumerable<HospitalManagement.Models.Patient>
+
+<h2>Your Patients</h2>
+
+@foreach (var patient in Model)
+{
+    <div>
+        <h3>@patient.FullName</h3>
+        <p>@patient.Email</p>
+        <form asp-action="ManagePatient" method="post">
+            <input type="hidden" name="patientId" value="@patient.Id" />
+            
+        </form>
+    </div>
+}

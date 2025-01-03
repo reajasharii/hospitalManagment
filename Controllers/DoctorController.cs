@@ -4,6 +4,8 @@ using HospitalManagement.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace HospitalManagement.Controllers
@@ -19,6 +21,54 @@ namespace HospitalManagement.Controllers
             _context = context;
             _userManager = userManager; // Ensure this is initialized
         }
+
+
+  public async Task<IActionResult> ManagePatients()
+    {
+        var doctor = await _userManager.GetUserAsync(User);
+        if (doctor == null)
+        {
+            return NotFound();
+        }
+
+        var patients = await _context.PatientDoctors
+            .Where(pd => pd.DoctorId == doctor.Id)
+            .Select(pd => pd.Patient)
+            .ToListAsync();
+
+        return View(patients);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // GET: /Doctor/MyAccount
         [Authorize]

@@ -9,6 +9,8 @@ namespace HospitalManagement.Models
         public Patient Patient { get; set; }  // Navigation property
 
         public string DoctorId { get; set; }  // Foreign key to Doctor (IdentityUser)
-        public Doctor Doctor { get; set; }    // Navigation property
+        public Doctor Doctor { get; set; } 
+        public string PatientFullName { get; set; } // To store patient's full name for convenience
+    public string DoctorFullName { get; set; }   // Navigation property
     }
 }

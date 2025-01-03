@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using HospitalManagement.Data;
 using HospitalManagement.Models;
@@ -5,8 +7,9 @@ using HospitalManagement.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-[Authorize(Roles = "Patient")]
+// [Authorize(Roles = "Patient")]
 public class PatientController : Controller
 {
     private readonly ApplicationDbContext _context;
@@ -18,10 +21,9 @@ public class PatientController : Controller
         _userManager = userManager;
     }
 
+    // Patient Account View (GET)
     [HttpGet]
-    [HttpGet]
-public async Task<IActionResult> PatientAccountView()
-
+    public async Task<IActionResult> PatientAccountView()
     {
         var user = await _userManager.GetUserAsync(User);
         if (user == null)
@@ -39,6 +41,7 @@ public async Task<IActionResult> PatientAccountView()
         return View(model);
     }
 
+   
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> PatientAccountView(EditAccountViewModel model)
@@ -70,4 +73,115 @@ public async Task<IActionResult> PatientAccountView()
 
         return View(model);
     }
+
+    
+     
+[HttpGet]
+public async Task<IActionResult> ConnectToDoctor()
+{
+    
+    var user = await _userManager.GetUserAsync(User);
+    if (user == null)
+    {
+        return NotFound("Logged-in user not found.");
+    }
+
+    var doctors = await _context.Doctors
+        .Select(d => new DoctorViewModel
+        {
+            Doctor = d, 
+            IsConnected = _context.PatientDoctors
+                .Any(pd => pd.DoctorId == d.Id && pd.PatientId == user.Id) // Check if connected
+        })
+        .ToListAsync();
+
+    return View(doctors);
+}
+
+
+
+
+
+
+
+ [HttpPost]
+public async Task<IActionResult> ConnectToDoctor(string doctorId)
+{
+    
+    var patient = await _userManager.GetUserAsync(User);
+    if (patient == null)
+    {
+        return NotFound("Logged-in user not found.");
+    }
+
+  
+    var doctor = await _context.Doctors
+        .FirstOrDefaultAsync(d => d.Id == doctorId);
+
+    if (doctor != null)
+    {
+       
+        var existingConnection = await _context.PatientDoctors
+            .FirstOrDefaultAsync(pd => pd.PatientId == patient.Id && pd.DoctorId == doctor.Id);
+        
+        if (existingConnection != null)
+        {
+            TempData["ErrorMessage"] = "You are already connected to this doctor.";
+            return RedirectToAction("ConnectToDoctor");
+        }
+
+        var patientDoctor = new PatientDoctor
+        {
+            PatientId = patient.Id,
+            DoctorId = doctor.Id,
+            PatientFullName = patient.FullName,
+            DoctorFullName = doctor.FullName
+        };
+
+        _context.PatientDoctors.Add(patientDoctor);
+        await _context.SaveChangesAsync();
+
+        
+        TempData["SuccessMessage"] = "You are successfully connected to the doctor!";
+        return RedirectToAction("ConnectToDoctor");
+    }
+
+    TempData["ErrorMessage"] = "Doctor not found.";
+    return RedirectToAction("ConnectToDoctor");
+}
+
+
+
+
+
+
+   [HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> DisconnectFromDoctor(string doctorId)
+{
+   
+    var user = await _userManager.GetUserAsync(User);
+    if (user == null)
+    {
+        return NotFound("Logged-in user not found.");
+    }
+
+
+    var connection = await _context.PatientDoctors
+        .FirstOrDefaultAsync(pd => pd.PatientId == user.Id && pd.DoctorId == doctorId);
+
+    if (connection != null)
+    {
+        _context.PatientDoctors.Remove(connection);
+        await _context.SaveChangesAsync();
+
+        TempData["SuccessMessage"] = "You have successfully disconnected from the doctor.";
+    }
+
+    return RedirectToAction("ConnectToDoctor");
+}
+
+
+
+    
 }

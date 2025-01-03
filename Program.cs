@@ -20,7 +20,7 @@ using System;
 // Program.cs
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure DbContext and Identity (same as before)
+// Configure DbContext and Identity
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -33,11 +33,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 .AddDefaultTokenProviders()
 .AddDefaultUI();
 
-
-
-
-
-
+// Add Razor Pages and MVC Controllers
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<MySeedData>();
@@ -50,24 +46,19 @@ using (var scope = app.Services.CreateScope())
     var seedData = services.GetRequiredService<MySeedData>();
     await seedData.Initialize(); // Ensure this is awaited
 }
+
 // Use authentication and authorization middleware
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+// This is the correct way to set up MVC routing
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
-
-
-
-
-// Routing setup
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
-});
-
+// Map Razor Pages (if needed for additional pages)
 app.MapRazorPages();
+
 app.Run();
