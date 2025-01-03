@@ -238,6 +238,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTXlBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/CreatePatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXENyZWF0ZVBhdGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/DeletePatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERlbGV0ZVBhdGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/EditPatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEVkaXRQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/ManagePatients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXE1hbmFnZVBhdGllbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

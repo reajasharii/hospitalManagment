@@ -99,22 +99,16 @@ public async Task<IActionResult> ConnectToDoctor()
 }
 
 
-
-
-
-
-
- [HttpPost]
+[HttpPost]
+[ValidateAntiForgeryToken]
 public async Task<IActionResult> ConnectToDoctor(string doctorId)
 {
-    
     var patient = await _userManager.GetUserAsync(User);
     if (patient == null)
     {
         return NotFound("Logged-in user not found.");
     }
 
-  
     var doctor = await _context.Doctors
         .FirstOrDefaultAsync(d => d.Id == doctorId);
 
@@ -130,6 +124,7 @@ public async Task<IActionResult> ConnectToDoctor(string doctorId)
             return RedirectToAction("ConnectToDoctor");
         }
 
+        
         var patientDoctor = new PatientDoctor
         {
             PatientId = patient.Id,
@@ -141,7 +136,6 @@ public async Task<IActionResult> ConnectToDoctor(string doctorId)
         _context.PatientDoctors.Add(patientDoctor);
         await _context.SaveChangesAsync();
 
-        
         TempData["SuccessMessage"] = "You are successfully connected to the doctor!";
         return RedirectToAction("ConnectToDoctor");
     }
@@ -149,6 +143,12 @@ public async Task<IActionResult> ConnectToDoctor(string doctorId)
     TempData["ErrorMessage"] = "Doctor not found.";
     return RedirectToAction("ConnectToDoctor");
 }
+
+
+
+
+
+ 
 
 
 
