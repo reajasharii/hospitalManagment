@@ -14,6 +14,7 @@ using static HospitalManagement.ViewModels.CreatePatientViewModel;
 
 namespace HospitalManagement.Controllers
 {
+   
     public class AdminController : Controller
     {
             private readonly ApplicationDbContext _context;
@@ -26,7 +27,11 @@ namespace HospitalManagement.Controllers
             _userManager = userManager;
         }
 
-      
+
+
+
+
+    
         public async Task<IActionResult> ManageAdmins()
         {
             var admins = await _userManager.GetUsersInRoleAsync("Admin");
@@ -422,11 +427,9 @@ public async Task<IActionResult> DeleteConfirmedDoctor(string id)
         
 public async Task<IActionResult> ManagePatients()
 {
-    
-    var patients = await _context.Patients.ToListAsync();
-
-  
-    return View("ManagePatients", patients);
+    // Get users in the "Patient" role
+    var patients = await _userManager.GetUsersInRoleAsync("Patient");
+    return View("ManagePatients", patients); // Return to view with patient data
 }
 
 
@@ -486,102 +489,133 @@ public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
 }
 
 
-    [HttpGet]
+    // GET: Edit Patient
+ // GET: Edit Patient
 public async Task<IActionResult> EditPatient(string id)
 {
-    
-    var patient = await _context.Patients.FindAsync(id);
-    
-    if (patient == null)
+    if (string.IsNullOrEmpty(id))
     {
-        return NotFound();
+        return NotFound(); // Return a 404 if no id is provided
     }
 
+    var patient = await _userManager.FindByIdAsync(id); // Fetch the patient by their ID
+    if (patient == null)
+    {
+        return NotFound(); // Return a 404 if the patient is not found
+    }
+
+    // Map the patient data to the EditPatientViewModel
     var model = new EditPatientViewModel
     {
+        Id = patient.Id,
         FullName = patient.FullName,
         Surname = patient.Surname,
         Email = patient.Email,
         MedicalHistory = patient.MedicalHistory
     };
 
-   return View("~/Views/Patient/EditPatient.cshtml", model);
-
+    return View(model); // Return the view with the patient details
 }
 
-      [HttpPost]
+
+
+// POST: Edit Patient
+ // POST: Edit Patient
+[HttpPost]
 [ValidateAntiForgeryToken]
-public async Task<IActionResult> EditPatient(string id, EditPatientViewModel model)
+public async Task<IActionResult> EditPatient(EditPatientViewModel model)
 {
     if (ModelState.IsValid)
     {
-        var patient = await _context.Patients.FindAsync(id);
-        
+        var patient = await _userManager.FindByIdAsync(model.Id); // Find patient by Id
         if (patient == null)
         {
-            return NotFound();
+            return NotFound(); // If patient doesn't exist, return 404
         }
 
-        
+        // Update patient details
         patient.FullName = model.FullName;
         patient.Surname = model.Surname;
         patient.Email = model.Email;
         patient.MedicalHistory = model.MedicalHistory;
 
-       
-        await _context.SaveChangesAsync();
-
-        
-        return RedirectToAction("ManagePatients");
+        // Update patient record in database
+        var result = await _userManager.UpdateAsync(patient);
+        if (result.Succeeded)
+        {
+            TempData["SuccessMessage"] = "Patient updated successfully!";
+            return RedirectToAction("ManagePatients"); // Redirect back to ManagePatients
+        }
+        else
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description); // Show error if update fails
+            }
+        }
     }
 
-    
-  return View("~/Views/Patient/EditPatient.cshtml", model);
-
+    return View(model); // If model is invalid, return the view with current data
 }
-     
+
+
 
        
        
        
        
 
-[HttpGet]
-public async Task<IActionResult> DeletePatient(string id)
-{
-    var patient = await _context.Patients.FindAsync(id);
-
-    if (patient == null)
+ // GET: Delete Patient
+ [HttpGet]
+    public async Task<IActionResult> DeletePatient(string id)
     {
-        return NotFound();
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var patient = await _userManager.FindByIdAsync(id);
+        if (patient == null)
+        {
+            return NotFound();
+        }
+
+        return View(patient); // Display the confirmation view
     }
 
-    return View(patient);  
-}
-
-
-
-
-
-[HttpPost, ActionName("DeletePatient")]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> DeletePatientConfirmed(string id)
-{
-    var patient = await _context.Patients.FindAsync(id);
-
-    if (patient == null)
+    // POST: /Admin/DeleteConfirmedPatient/{id}
+    [HttpPost, ActionName("DeleteConfirmedPatient")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteConfirmedPatient(string id)
     {
-        return NotFound();
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var patient = await _userManager.FindByIdAsync(id);
+        if (patient == null)
+        {
+            return NotFound();
+        }
+
+        var result = await _userManager.DeleteAsync(patient);
+        if (result.Succeeded)
+        {
+            TempData["SuccessMessage"] = "Patient deleted successfully!";
+            return RedirectToAction("ManagePatients");
+        }
+
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
+
+        return View(patient); // Return the confirmation view again if failed
     }
 
-    _context.Patients.Remove(patient);
-    await _context.SaveChangesAsync();
 
-    return RedirectToAction("ManagePatients"); 
+
+
 }
-
-
-
-
-    }
 }

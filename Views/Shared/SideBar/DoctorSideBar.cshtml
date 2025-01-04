@@ -1,8 +1,10 @@
 <!-- Doctor Sidebar (DoctorSideBar.cshtml) -->
 <div class="sidebar">
     <ul>
-        <li><a href="@Url.Action("ManagePatients", "Doctor")">Manage Patients</a></li>
+        <li><a href="@Url.Action("ManagePatients", "Doctor")">Connected Patients</a></li>
+        <li><a href="@Url.Action("ManagePatients", "Admin")">All Patients</a></li>
         <li><a href="@Url.Action("ViewSchedule", "Doctor")">View Schedule</a></li>
         <li><a href="@Url.Action("MyAccount", "Doctor")">My Account</a></li> <!-- New feature -->
+
     </ul>
 </div>
