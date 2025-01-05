@@ -580,39 +580,42 @@ public async Task<IActionResult> EditPatient(EditPatientViewModel model)
             return NotFound();
         }
 
-        return View(patient); // Display the confirmation view
+        return View(patient);
     }
 
-    // POST: /Admin/DeleteConfirmedPatient/{id}
-    [HttpPost, ActionName("DeleteConfirmedPatient")]
-    [ValidateAntiForgeryToken]
+   
     public async Task<IActionResult> DeleteConfirmedPatient(string id)
+{
+    var patient = await _userManager.FindByIdAsync(id);
+
+    if (patient == null)
     {
-        if (id == null)
-        {
-            return NotFound();
-        }
-
-        var patient = await _userManager.FindByIdAsync(id);
-        if (patient == null)
-        {
-            return NotFound();
-        }
-
-        var result = await _userManager.DeleteAsync(patient);
-        if (result.Succeeded)
-        {
-            TempData["SuccessMessage"] = "Patient deleted successfully!";
-            return RedirectToAction("ManagePatients");
-        }
-
-        foreach (var error in result.Errors)
-        {
-            ModelState.AddModelError(string.Empty, error.Description);
-        }
-
-        return View(patient); // Return the confirmation view again if failed
+        TempData["ErrorMessage"] = "Patient not found.";
+        return RedirectToAction("ManagePatients");
     }
+
+    
+    var patientDoctors = _context.PatientDoctors.Where(pd => pd.PatientId == patient.Id);
+    _context.PatientDoctors.RemoveRange(patientDoctors);
+
+
+    await _context.SaveChangesAsync();
+
+ 
+    var result = await _userManager.DeleteAsync(patient);
+
+    if (result.Succeeded)
+    {
+        TempData["SuccessMessage"] = "Patient deleted successfully.";
+    }
+    else
+    {
+        TempData["ErrorMessage"] = "Error occurred while deleting the patient.";
+    }
+
+    return RedirectToAction("ManagePatients");
+}
+
 
 
 
