@@ -1,0 +1,180 @@
+@using HospitalManagement.Models
+@model HospitalManagement.Models.Contact
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            margin-bottom: 50px;
+        }
+
+        .contact-box {
+            width: 100%;
+            max-width: 600px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid #e0e0e0;
+            min-height: 600px;
+        }
+
+        h3 {
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-floating input, .form-floating select, .form-floating textarea {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-floating label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .btn-info {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-info:hover {
+            background-color: #0056b3;
+        }
+
+        .text-info {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .text-info:hover {
+            text-decoration: underline;
+        }
+
+        .form-check-label {
+            margin-left: 5px;
+        }
+
+        .d-grid {
+            margin-top: 20px;
+        }
+
+        .mt-3 {
+            margin-top: 20px;
+        }
+
+        .forgot-links {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="contact-box">
+            <h3>Contact Us</h3>
+
+            <form asp-action="Index" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-d   anger" role="alert"></div>
+
+                <!-- First Name -->
+                <div class="form-floating mb-3">
+                    <input asp-for="FirstName" class="form-control" placeholder="First Name" />
+                    <label asp-for="FirstName">First Name</label>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-floating mb-3">
+                    <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+                    <label asp-for="LastName">Last Name</label>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Email" class="form-control" placeholder="Email Address" />
+                    <label asp-for="Email">Email Address</label>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="form-floating mb-3">
+                    <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number" />
+                    <label asp-for="PhoneNumber">Phone Number</label>
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <!-- Reason for Contact -->
+                <div class="form-floating mb-3">
+                    <select asp-for="ReasonForContact" class="form-control">
+                        <option value="">Select a reason</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Appointment Booking">Appointment Booking</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <label asp-for="ReasonForContact">Reason for Contact</label>
+                    <span asp-validation-for="ReasonForContact" class="text-danger"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="form-floating mb-3">
+                    <textarea asp-for="Description" class="form-control" placeholder="Describe your issue"></textarea>
+                    <label asp-for="Description">Description</label>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-info">Send</button>
+            </form>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
