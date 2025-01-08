@@ -1,0 +1,184 @@
+/* General Styles for Manage Admins Page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9; /* Ngjyrë e butë për sfondin */
+    color: #333; /* Ngjyrë e errët për tekstin */
+}
+
+/* Title */
+h2 {
+    color: #0056b3; /* Ngjyra blu për titujt */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff; /* Background color of the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors */
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+}
+
+/* Actions Column */
+.table td a {
+    margin-right: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Additional Styles for Manage Doctors Page */
+
+/* Title for Manage Doctors */
+h2 {
+    color: #0056b3; /* Same color for consistency */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table Styling for Doctors */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Buttons for Edit and Delete */
+.table td a {
+    margin-right: 10px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.table td .btn-primary {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+
+.table td .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.table td .btn-danger {
+    background-color: #dc3545;
+    color: white;
+    font-weight: 600;
+}
+
+.table td .btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}

@@ -1,9 +1,16 @@
-<!-- Admin Sidebar (AdminSideBar.cshtml) -->
 <div class="sidebar">
-    <ul>
-        <li><a href="@Url.Action("ManageAdmins", "Admin")">Manage Admins</a></li>
-        <li><a href="@Url.Action("ManageDoctors", "Admin")">Manage Doctors</a></li>
-        <li><a href="@Url.Action("ManagePatients", "Admin")">Manage Patients</a></li>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="@Url.Action("ManageAdmins", "Admin")" class="text-decoration-none text-dark">Manage Admins</a>
+        </li>
+        <li class="list-group-item">
+            <a href="@Url.Action("ManageDoctors", "Admin")" class="text-decoration-none text-dark">Manage Doctors</a>
+        </li>
+        <li class="list-group-item">
+            <a href="@Url.Action("ManagePatients", "Admin")" class="text-decoration-none text-dark">Manage Patients</a>
+        </li>
+        <li class="list-group-item">
+            <a href="@Url.Action("MyAccount", "Admin")" class="text-decoration-none text-dark">My Account</a>
+        </li>
     </ul>
-     <li><a href="@Url.Action("MyAccount", "Admin")">My Account</a></li>
 </div>

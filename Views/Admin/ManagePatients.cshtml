@@ -2,6 +2,9 @@
 
 <h2>Manage Patients</h2>
 
+<!-- Create Button -->
+<a class="btn btn-success mb-3" href="@Url.Action("CreatePatient", "Admin")">Create New Patient</a>
+
 <table class="table">
     <thead>
         <tr>
@@ -17,15 +20,21 @@
                 <td>@patient.FullName @patient.Surname</td>
                 <td>@patient.Email</td>
                 <td>
-                    <!-- Link to the EditPatient action, passing the patient Id -->
-                    <a href="@Url.Action("EditPatient", "Admin", new { id = patient.Id })" class="btn btn-warning">Edit</a>
-                   <a href="@Url.Action("DeletePatient", "Admin", new { id = patient.Id })" class="btn btn-danger">Delete</a>
-
-
+                    <!-- Edit Button -->
+                    <a href="@Url.Action("EditPatient", "Admin", new { id = patient.Id })" class="btn btn-primary">Edit</a>
+                    <!-- Delete Button -->
+                    <a href="javascript:void(0);" onclick="deletePatient('@patient.Id')" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-<a asp-action="CreatePatient" class="btn btn-success">Create New Patient</a>
 
+<!-- Add JavaScript for Delete Confirmation -->
+<script>
+    function deletePatient(patientId) {
+        if (confirm('Are you sure you want to delete this patient?')) {
+            window.location.href = '@Url.Action("DeletePatient", "Admin", new { id = "__patientId__" })'.replace('__patientId__', patientId);
+        }
+    }
+</script>

@@ -1,0 +1,89 @@
+/* General Styles for the My Account Page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9; /* Soft background color */
+    color: #333; /* Dark text color */
+}
+
+/* Page Title */
+.page-title {
+    color: #0056b3; /* Blue color for titles */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+/* Focus Effect */
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Success Alert */
+.alert {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .btn-success {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

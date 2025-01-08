@@ -1,22 +1,115 @@
-html {
-  font-size: 14px;
+/* Header Styling */
+.custom-header {
+  background-color: #007bff; /* Ngjyra e kaltër për header-in */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hije e lehtë për header */
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
+.custom-header .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff; /* Ngjyra e bardhë për brand */
+  transition: color 0.3s ease; /* Efekt i kalimit të ngjyrës */
+}
+
+.custom-header .navbar-brand:hover {
+  color: #d4e0f7; /* Efekti i kalimit të ngjyrës për brand */
+}
+
+.custom-header .navbar-nav .nav-link {
+  color: #fff; /* Ngjyra e bardhë për lidhjet e navbar-it */
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.custom-header .navbar-nav .nav-link:hover {
+  color: #d4e0f7; /* Efekti i kalimit të ngjyrës për lidhjet */
+}
+
+.custom-header .btn-outline-primary {
+  color: #fff;
+  border-color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.custom-header .btn-outline-primary:hover {
+  background-color: #0056b3; /* Ngjyrë më e errët në hover */
+  border-color: #0056b3;
+  color: #fff;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Ngjyra e ikonës për toggle */
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .custom-header .navbar-nav {
+      margin-top: 1rem;
+  }
+
+  .custom-header .navbar-nav .nav-link {
+      font-size: 1rem;
+      padding: 0.5rem 0;
+  }
+
+  .custom-header .navbar-nav .nav-item {
+      text-align: center;
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/* Footer Styling */
+.footer {
+  background-color: #343a40; /* Ngjyrë e errët për footer */
+  color: #f8f9fa; /* Ngjyrë e bardhë për tekstin e footer-it */
+  padding: 2rem 0; /* Hapësirë e mjaftueshme në lartësi */
+  text-align: center; /* Teksti në qendër */
+  font-size: 1rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Hije e lehtë në pjesën e sipërme të footer-it */
+  display: flex;
+  justify-content: center; /* Qendron përmbajtja në mes */
+  align-items: center;
+  flex-direction: column; /* Elementet janë në kolonë */
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.footer a {
+  color: #f8f9fa; /* Ngjyra e lidhjeve në footer */
+  text-decoration: none; /* Pa nënvizon për lidhjet */
+  font-weight: 500; /* Pesha e fontit për lidhjet */
+  transition: color 0.3s ease; /* Efekt kalimi për lidhjet */
+  margin-top: 0.5rem; /* Hapësirë midis lidhjeve */
 }
 
-body {
-  margin-bottom: 60px;
+.footer a:hover {
+  color: #007bff; /* Ngjyra e kalimit për lidhjet */
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer .container p {
+  margin: 0.5rem 0; /* Hapësirë midis elementeve të paragrafëve */
+}
+
+/* Mobile Responsive Footer */
+@media (max-width: 768px) {
+  .footer {
+      font-size: 0.9rem; /* Pak më e vogël për pajisjet mobile */
+      padding: 1.5rem 0; /* Pak më e vogël për pajisjet mobile */
+  }
+
+  .footer .container {
+      text-align: center; /* Siguro që footer-i të duket i rregulluar në pajisje mobile */
+  }
 }
