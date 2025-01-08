@@ -1,10 +1,17 @@
 <!-- Doctor Sidebar (DoctorSideBar.cshtml) -->
 <div class="sidebar">
-    <ul>
-        <li><a href="@Url.Action("ManagePatients", "Doctor")">Connected Patients</a></li>
-        <li><a href="@Url.Action("ManagePatients", "Admin")">All Patients</a></li>
-        <li><a href="@Url.Action("ViewSchedule", "Doctor")">View Schedule</a></li>
-        <li><a href="@Url.Action("MyAccount", "Doctor")">My Account</a></li> <!-- New feature -->
-
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="@Url.Action("ManagePatients", "Doctor")" class="text-decoration-none text-dark">Connected Patients</a>
+        </li>
+        <li class="list-group-item">
+            <a href="@Url.Action("ManagePatients", "Admin")" class="text-decoration-none text-dark">All Patients</a>
+        </li>
+        <li class="list-group-item">
+            <a href="@Url.Action("ViewSchedule", "Doctor")" class="text-decoration-none text-dark">View Schedule</a>
+        </li>
+        <li class="list-group-item">
+            <a href="@Url.Action("MyAccount", "Doctor")" class="text-decoration-none text-dark">My Account</a>
+        </li>
     </ul>
 </div>
