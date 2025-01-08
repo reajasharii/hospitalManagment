@@ -300,6 +300,76 @@ public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
     return View(model);
 }
 
+public IActionResult ConnectToDoctor()
+{
+    // Fetch unique specialties
+    var specialties = _context.Doctors
+        .Select(d => d.Specialty)
+        .Distinct()
+        .ToList();
+
+    ViewBag.Specialties = specialties;
+
+    // Fetch all doctors for the initial list
+    var doctors = _context.Doctors.ToList();
+    return View(doctors);
+}
+
+
+
+
+
+[HttpPost]
+public async Task<IActionResult> FilterDoctors([FromBody] DoctorFilterViewModel filters)
+{
+    var query = _context.Doctors.AsQueryable();
+
+    // Apply search text filter
+    if (!string.IsNullOrEmpty(filters.SearchText))
+    {
+        query = query.Where(d => d.FullName.Contains(filters.SearchText) ||
+                                 d.Email.Contains(filters.SearchText));
+    }
+
+    // Apply specialty filter
+    if (!string.IsNullOrEmpty(filters.Specialty))
+    {
+        query = query.Where(d => d.Specialty == filters.Specialty);
+    }
+
+    // Apply checkbox filters
+    if (filters.HasLicense)
+    {
+        query = query.Where(d => !string.IsNullOrEmpty(d.LicenseNumber));
+    }
+
+    if (filters.EmailConfirmed)
+    {
+        query = query.Where(d => d.EmailConfirmed);
+    }
+
+    // Fetch filtered doctors
+    var filteredDoctors = await query.ToListAsync();
+
+    // Return as JSON for frontend
+    return Json(filteredDoctors.Select(d => new
+    {
+        d.FullName,
+        d.Specialty,
+        d.Email,
+        d.LicenseNumber
+    }));
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

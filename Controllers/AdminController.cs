@@ -316,6 +316,7 @@ public async Task<IActionResult> CreateDoctor(CreateDoctorViewModel model)
                 Specialty = model.Specialty,
                 LicenseNumber = model.LicenseNumber,
                 Surname = model.Surname,
+                 Email = model.Email,
            
             };
 
@@ -351,7 +352,10 @@ public IActionResult EditDoctor(string doctorid)
         FullName = doctor.FullName,
         Surname = doctor.Surname,
         LicenseNumber = doctor.LicenseNumber,
-        Specialty = doctor.Specialty
+        Specialty = doctor.Specialty,
+         Email = doctor.Email,
+
+        
     };
 
     return View(viewModel);
@@ -370,6 +374,8 @@ public IActionResult EditDoctor(EditDoctorViewModel model)
     doctor.Surname = model.Surname;
     doctor.Specialty = model.Specialty;
     doctor.LicenseNumber = model.LicenseNumber;
+      doctor.Email = model.Email; 
+    
 
     _context.SaveChanges();
 
@@ -450,7 +456,8 @@ public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
             FullName = model.FullName,
             Surname = model.Surname,
             Email = model.Email,
-            UserName = model.Email // Username is the email
+            UserName = model.Email,
+            MedicalHistory = model.MedicalHistory, // Username is the email
         };
 
         // Use UserManager to create ApplicationUser
