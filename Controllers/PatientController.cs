@@ -77,31 +77,27 @@ public class PatientController : Controller
     
      
 [HttpGet]
-public async Task<IActionResult> ConnectToDoctor()
+public IActionResult ConnectToDoctor(string searchText)
 {
-    
-    var user = await _userManager.GetUserAsync(User);
-    if (user == null)
-    {
-        return NotFound("Logged-in user not found.");
-    }
-
-    var doctors = await _context.Doctors
+    // Fetch all doctors or filter based on searchText
+    var doctors = _context.Doctors
+        .Where(d => string.IsNullOrEmpty(searchText) || d.FullName.Contains(searchText))
         .Select(d => new DoctorViewModel
         {
-            Doctor = d, 
-            IsConnected = _context.PatientDoctors
-                .Any(pd => pd.DoctorId == d.Id && pd.PatientId == user.Id) // Check if connected
+            Doctor = d,
+            IsConnected = _context.PatientDoctors.Any(pd => pd.DoctorId == d.Id && pd.PatientId == _userManager.GetUserId(User))
         })
-        .ToListAsync();
+        .ToList();
 
-    return View(doctors);
+    return View("ConnectToDoctor", doctors); // This will return the full view instead of a partial view
 }
+
+
 
 
 [HttpPost]
 [ValidateAntiForgeryToken]
-public async Task<IActionResult> ConnectToDoctor(string doctorId)
+public async Task<IActionResult> ConnectToDoctorPost(string doctorId)  // Changed method name to ConnectToDoctorPost
 {
     var patient = await _userManager.GetUserAsync(User);
     if (patient == null)
@@ -114,17 +110,15 @@ public async Task<IActionResult> ConnectToDoctor(string doctorId)
 
     if (doctor != null)
     {
-       
         var existingConnection = await _context.PatientDoctors
             .FirstOrDefaultAsync(pd => pd.PatientId == patient.Id && pd.DoctorId == doctor.Id);
-        
+
         if (existingConnection != null)
         {
             TempData["ErrorMessage"] = "You are already connected to this doctor.";
             return RedirectToAction("ConnectToDoctor");
         }
 
-        
         var patientDoctor = new PatientDoctor
         {
             PatientId = patient.Id,
@@ -143,7 +137,6 @@ public async Task<IActionResult> ConnectToDoctor(string doctorId)
     TempData["ErrorMessage"] = "Doctor not found.";
     return RedirectToAction("ConnectToDoctor");
 }
-
 
 
 

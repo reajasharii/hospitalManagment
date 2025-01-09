@@ -316,6 +316,7 @@ public async Task<IActionResult> CreateDoctor(CreateDoctorViewModel model)
                 Specialty = model.Specialty,
                 LicenseNumber = model.LicenseNumber,
                 Surname = model.Surname,
+                Email = model.Email,
            
             };
 
@@ -351,7 +352,8 @@ public IActionResult EditDoctor(string doctorid)
         FullName = doctor.FullName,
         Surname = doctor.Surname,
         LicenseNumber = doctor.LicenseNumber,
-        Specialty = doctor.Specialty
+        Specialty = doctor.Specialty,
+         Email = doctor.Email,
     };
 
     return View(viewModel);
@@ -370,12 +372,14 @@ public IActionResult EditDoctor(EditDoctorViewModel model)
     doctor.Surname = model.Surname;
     doctor.Specialty = model.Specialty;
     doctor.LicenseNumber = model.LicenseNumber;
+      doctor.Email = model.Email;
 
     _context.SaveChanges();
 
    
     return RedirectToAction("ManageDoctors");
 }
+
 
 
 
