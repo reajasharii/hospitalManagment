@@ -1,35 +1,17 @@
-<!-- Patient Sidebar -->
+<!-- Patient Sidebar (PatientSideBar.cshtml) -->
 <div class="sidebar">
     <ul class="list-group">
-        <!-- Manage Appointments -->
         <li class="list-group-item">
-            <a href="@Url.Action("ManageAppointments", "Patient")" class="text-decoration-none text-dark">
-                <i class="bi bi-calendar"></i> Manage Appointments
-            </a>
+            <a href="@Url.Action("ManageAppointments", "Patient")" class="text-decoration-none text-dark">Manage Appointments</a>
         </li>
-
-        <!-- View Medical History -->
         <li class="list-group-item">
-            <a href="@Url.Action("ViewMedicalHistory", "Patient")" class="text-decoration-none text-dark">
-                <i class="bi bi-journal-medical"></i> View Medical History
-            </a>
+            <a href="@Url.Action("ViewMedicalHistory", "Patient")" class="text-decoration-none text-dark">View Medical History</a>
         </li>
-
-        <!-- My Account -->
         <li class="list-group-item">
-            <a href="@Url.Action("PatientAccountView", "Patient")" class="text-decoration-none text-dark">
-                <i class="bi bi-person"></i> My Account
-            </a>
+            <a href="@Url.Action("PatientAccountView", "Patient")" class="text-decoration-none text-dark">My Account</a>
         </li>
-
-        <!-- Manage Doctor Connections -->
-      <li class="list-group-item">
-            <a href="@Url.Action("ConnectToDoctor", "Patient")" class="text-decoration-none text-dark">
-                <i class="bi bi-link"></i> Manage Doctor Connections
-            </a>
+        <li class="list-group-item">
+            <a href="@Url.Action("ConnectToDoctor", "Patient")" class="text-decoration-none text-dark">Manage Doctor Connections</a>
         </li>
-
-        <!-- Additional Option: Logout (Optional) -->
-        
     </ul>
 </div>
