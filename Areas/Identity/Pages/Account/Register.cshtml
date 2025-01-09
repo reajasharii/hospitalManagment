@@ -1,4 +1,4 @@
-﻿@page
+﻿@* @page
 @model RegisterModel
 @{
     ViewData["Title"] = "Register";
@@ -89,6 +89,170 @@
         </section>
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} *@
+@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+
+        .form-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px; /* Hapësira nga header dhe footer */
+        }
+
+        .register-box {
+            width: 100%;
+            max-width: 500px; /* Përshtatuar për t'u bërë më e gjerë */
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hije për formën */
+            border: 1px solid #e0e0e0;
+            margin: auto; /* Qendron në qendër të ekranit */
+        }
+
+        h3 {
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-floating input, .form-floating textarea {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-floating label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .btn-info {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-info:hover {
+            background-color: #0056b3;
+        }
+
+        .text-info {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .text-info:hover {
+            text-decoration: underline;
+        }
+
+        .form-check-label {
+            margin-left: 5px;
+        }
+
+        .d-grid {
+            margin-top: 20px;
+        }
+
+        .mt-3 {
+            margin-top: 20px;
+        }
+
+        .forgot-links {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="form-container">
+        <div class="register-box">
+            <h3>Create a new account</h3>
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                
+                <!-- Full Name -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.FullName" class="form-control" autocomplete="name" aria-required="true" placeholder="Full Name" />
+                    <label asp-for="Input.FullName">Full Name</label>
+                    <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                </div>
+
+                <!-- Surname -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Surname" class="form-control" autocomplete="family-name" aria-required="true" placeholder="Surname" />
+                    <label asp-for="Input.Surname">Surname</label>
+                    <span asp-validation-for="Input.Surname" class="text-danger"></span>
+                </div>
+
+                <!-- Medical History -->
+                <div class="form-floating mb-3">
+                    <textarea asp-for="Input.MedicalHistory" class="form-control" autocomplete="medical-history" aria-required="true" placeholder="Medical History"></textarea>
+                    <label asp-for="Input.MedicalHistory">Medical History</label>
+                    <span asp-validation-for="Input.MedicalHistory" class="text-danger"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <label asp-for="Input.Email">Email</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <!-- Password -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Password" />
+                    <label asp-for="Input.Password">Password</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Confirm Password" />
+                    <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <button id="registerSubmit" type="submit" class="btn btn-info">Register</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

@@ -1,4 +1,4 @@
-﻿@page
+﻿@* @page
 @model ResendEmailConfirmationModel
 @{
     ViewData["Title"] = "Resend email confirmation";
@@ -20,6 +20,135 @@
         </form>
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} *@
+@page
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = "Resend email confirmation";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+
+        .form-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .contact-box {
+            width: 100%;
+            max-width: 500px;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid #e0e0e0;
+            margin: 50px 0; /* Hapësira nga header dhe footer */
+            min-height: 400px; /* Lartësia minimale e formës */
+        }
+
+        h3 {
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-floating input {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-floating label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .btn-info {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-info:hover {
+            background-color: #0056b3;
+        }
+
+        .text-info {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .text-info:hover {
+            text-decoration: underline;
+        }
+
+        .form-check-label {
+            margin-left: 5px;
+        }
+
+        .d-grid {
+            margin-top: 20px;
+        }
+
+        .mt-3 {
+            margin-top: 20px;
+        }
+
+        .forgot-links {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="contact-box">
+            <h3>Resend Email Confirmation</h3>
+
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" aria-required="true" placeholder="name@example.com" />
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-info">Resend</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

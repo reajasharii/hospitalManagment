@@ -19,6 +19,10 @@ public class HomeController : Controller
     {
         return View();
     }
+public IActionResult Contact()
+{
+    return View(); // Ky dërgon përdoruesin tek pamja 'Contact.cshtml'
+}
 
     public IActionResult Privacy()
     {
