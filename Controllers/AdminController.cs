@@ -18,13 +18,15 @@ namespace HospitalManagement.Controllers
     public class AdminController : Controller
     {
             private readonly ApplicationDbContext _context;
-         private readonly UserManager<ApplicationUser> _userManager;   
+         private readonly UserManager<ApplicationUser> _userManager; 
+         private readonly ILogger<AdminController> _logger;  
          
 
-        public AdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public AdminController(ApplicationDbContext context, UserManager<ApplicationUser> userManager,ILogger<AdminController> logger)
         {
             _context = context;
             _userManager = userManager;
+            _logger = logger;
         }
 
 
@@ -448,27 +450,26 @@ public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
 {
     if (ModelState.IsValid)
     {
-        // Map Patient to ApplicationUser
+       
         var patientUser = new ApplicationUser
         {
             FullName = model.FullName,
             Surname = model.Surname,
             Email = model.Email,
-            UserName = model.Email // Username is the email
+            UserName = model.Email 
         };
 
-        // Use UserManager to create ApplicationUser
         var result = await _userManager.CreateAsync(patientUser, model.Password);
 
         if (result.Succeeded)
         {
-            // Assign the Patient role
+          
             await _userManager.AddToRoleAsync(patientUser, "Patient");
 
-            // Add a new Patient to the database linked by Id
+           
             var patient = new Patient
             {
-                Id = patientUser.Id, // Use ApplicationUser ID as foreign key
+                Id = patientUser.Id, 
                 FullName = model.FullName,
                 Surname = model.Surname,
                 Email = model.Email,
@@ -478,11 +479,11 @@ public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
             _context.Patients.Add(patient);
             await _context.SaveChangesAsync();
 
-            // Redirect to ManagePatients view
+     
             return RedirectToAction("ManagePatients");
         }
 
-        // Handle errors
+     
         foreach (var error in result.Errors)
         {
             ModelState.AddModelError(string.Empty, error.Description);
@@ -493,22 +494,21 @@ public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
 }
 
 
-    // GET: Edit Patient
- // GET: Edit Patient
+    
 public async Task<IActionResult> EditPatient(string id)
 {
     if (string.IsNullOrEmpty(id))
     {
-        return NotFound(); // Return a 404 if no id is provided
+        return NotFound(); 
     }
 
-    var patient = await _userManager.FindByIdAsync(id); // Fetch the patient by their ID
+    var patient = await _userManager.FindByIdAsync(id); 
     if (patient == null)
     {
-        return NotFound(); // Return a 404 if the patient is not found
+        return NotFound(); 
     }
 
-    // Map the patient data to the EditPatientViewModel
+    
     var model = new EditPatientViewModel
     {
         Id = patient.Id,
@@ -518,48 +518,47 @@ public async Task<IActionResult> EditPatient(string id)
         MedicalHistory = patient.MedicalHistory
     };
 
-    return View(model); // Return the view with the patient details
+    return View(model); 
 }
 
 
 
-// POST: Edit Patient
- // POST: Edit Patient
+
 [HttpPost]
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> EditPatient(EditPatientViewModel model)
 {
     if (ModelState.IsValid)
     {
-        var patient = await _userManager.FindByIdAsync(model.Id); // Find patient by Id
+        var patient = await _userManager.FindByIdAsync(model.Id); 
         if (patient == null)
         {
-            return NotFound(); // If patient doesn't exist, return 404
+            return NotFound(); 
         }
 
-        // Update patient details
+ 
         patient.FullName = model.FullName;
         patient.Surname = model.Surname;
         patient.Email = model.Email;
         patient.MedicalHistory = model.MedicalHistory;
 
-        // Update patient record in database
+       
         var result = await _userManager.UpdateAsync(patient);
         if (result.Succeeded)
         {
             TempData["SuccessMessage"] = "Patient updated successfully!";
-            return RedirectToAction("ManagePatients"); // Redirect back to ManagePatients
+            return RedirectToAction("ManagePatients"); 
         }
         else
         {
             foreach (var error in result.Errors)
             {
-                ModelState.AddModelError(string.Empty, error.Description); // Show error if update fails
+                ModelState.AddModelError(string.Empty, error.Description); 
             }
         }
     }
 
-    return View(model); // If model is invalid, return the view with current data
+    return View(model);
 }
 
 
@@ -569,7 +568,7 @@ public async Task<IActionResult> EditPatient(EditPatientViewModel model)
        
        
 
- // GET: Delete Patient
+
  [HttpGet]
     public async Task<IActionResult> DeletePatient(string id)
     {
@@ -619,6 +618,187 @@ public async Task<IActionResult> EditPatient(EditPatientViewModel model)
 
     return RedirectToAction("ManagePatients");
 }
+public async Task<IActionResult> ManageConnections()
+{
+
+    var connections = await _context.PatientDoctors
+        .Select(pd => new ConnectionViewModel
+        {
+            DoctorId = pd.DoctorId, 
+            DoctorName = pd.DoctorFullName,   
+            PatientName = pd.PatientFullName
+        })
+        .ToListAsync();
+
+    
+    var viewModel = new ManageConnectionsViewModel
+    {
+        Connections = connections, 
+        AvailableDoctors = await _context.Doctors.ToListAsync(),
+        CurrentPatients = await _userManager.Users.ToListAsync()
+    };
+
+    return View(viewModel);
+}
+
+
+
+
+
+
+
+
+
+public async Task<IActionResult> AddConnection(string selectedPatientId, string doctorId)
+{
+    var patient = await _context.Users.FindAsync(selectedPatientId);  // Patient
+    var doctor = await _context.Doctors.FindAsync(doctorId);  // Doctor
+
+    if (patient == null || doctor == null)
+    {
+        TempData["ErrorMessage"] = "Patient or Doctor not found.";
+        return RedirectToAction("ManageConnections");
+    }
+
+    var existingConnection = await _context.PatientDoctors
+        .FirstOrDefaultAsync(pd => pd.PatientId == selectedPatientId && pd.DoctorId == doctorId);
+
+    if (existingConnection != null)
+    {
+        TempData["ErrorMessage"] = "This connection already exists.";
+        return RedirectToAction("ManageConnections");
+    }
+
+    var connection = new PatientDoctor
+    {
+        PatientId = selectedPatientId,
+        DoctorId = doctorId,
+        PatientFullName = patient.UserName,  
+        DoctorFullName = doctor.FullName,    
+    };
+
+ 
+    _context.PatientDoctors.Add(connection);
+    await _context.SaveChangesAsync();
+
+    TempData["SuccessMessage"] = "Connection added successfully.";
+    return RedirectToAction("ManageConnections");
+}
+
+
+
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> DeleteConnection(string doctorId)
+{
+    if (string.IsNullOrEmpty(doctorId))
+    {
+        TempData["ErrorMessage"] = "Invalid Doctor ID.";
+        return RedirectToAction("ManageConnections");
+    }
+
+    var connection = await _context.PatientDoctors
+        .FirstOrDefaultAsync(pd => pd.DoctorId == doctorId);
+
+    if (connection == null)
+    {
+        TempData["ErrorMessage"] = "Connection not found.";
+        return RedirectToAction("ManageConnections");
+    }
+
+   
+    _context.PatientDoctors.Remove(connection);
+    await _context.SaveChangesAsync();
+
+    TempData["SuccessMessage"] = "Connection successfully deleted.";
+    return RedirectToAction("ManageConnections");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// [HttpGet]
+// public async Task<IActionResult> ManageConnections()
+// {
+//     var user = await _userManager.GetUserAsync(User); // Get the current patient
+//     if (user == null)
+//     {
+//         return NotFound();
+//     }
+
+//     // Get the current patient’s connections
+//     var patientConnections = await _context.PatientDoctors
+//         .Include(pd => pd.Doctor)
+//         .Where(pd => pd.PatientId == user.Id)
+//         .ToListAsync();
+
+//     var model = new ManageConnectionsViewModel
+//     {
+//         Connections = patientConnections.Select(c => new ConnectionViewModel
+//         {
+//             DoctorId = c.Doctor.Id,
+//             DoctorName = $"{c.Doctor.FullName} {c.Doctor.Surname}",
+//             Specialty = c.Doctor.Specialty,
+//             LicenseNumber = c.Doctor.LicenseNumber
+//         }).ToList()
+//     };
+
+//     return View(model);
+// }
+
+
+// [HttpPost]
+// [ValidateAntiForgeryToken]
+// public async Task<IActionResult> EditConnection(EditConnectionViewModel model)
+// {
+//     if (ModelState.IsValid)
+//     {
+//         var user = await _userManager.GetUserAsync(User); // Current patient
+//         if (user == null)
+//         {
+//             return NotFound();
+//         }
+
+//         // Find the current connection
+//         var connection = await _context.PatientDoctors
+//             .FirstOrDefaultAsync(pd => pd.PatientId == user.Id && pd.DoctorId == model.OldDoctorId);
+
+//         if (connection != null)
+//         {
+//             // Update the connection to the new doctor
+//             connection.DoctorId = model.NewDoctorId;
+//             _context.Update(connection);
+//             await _context.SaveChangesAsync();
+
+//             TempData["SuccessMessage"] = "Connection updated successfully!";
+//             return RedirectToAction("ManageConnections");
+//         }
+//     }
+
+//     ModelState.AddModelError("", "Failed to update connection. Please try again.");
+//     return RedirectToAction("ManageConnections");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

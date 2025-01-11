@@ -1,0 +1,92 @@
+@model HospitalManagement.ViewModels.ManageConnectionsViewModel
+
+<h2>Manage Connections</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-3">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<h3>Current Connections</h3>
+@if (Model.Connections != null)
+{
+    <p>Total Connections: @Model.Connections.Count</p>
+}
+else
+{
+    <p>Connections is null!</p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>       
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Connections != null && Model.Connections.Any())
+        {
+            foreach (var connection in Model.Connections)
+            {
+                <tr>
+                    <td>@connection.PatientName</td>
+                    <td>@connection.DoctorName</td>   
+                    <td>
+                        <form method="post" asp-action="DeleteConnection" asp-route-doctorId="@connection.DoctorId" 
+                              onsubmit="return confirm('Are you sure you want to disconnect this connection?');"
+                              style="display: inline-block;">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger">Delete Connection</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3" class="text-center">No connections found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Add New Connection</h3>
+<form method="post" asp-action="AddConnection">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="DoctorId">Select a Doctor to Connect With:</label>
+        <select id="DoctorId" name="doctorId" class="form-control">
+            <option value="">-- Select a Doctor --</option>
+            @foreach (var doctor in Model.AvailableDoctors)
+            {
+                <option value="@doctor.Id">@doctor.FullName</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="PatientId">Select a Patient to Connect With:</label>
+        <select id="PatientId" name="selectedPatientId" class="form-control">
+            <option value="">-- Select a Patient --</option>
+            @foreach (var patient in Model.CurrentPatients)
+            {
+                <option value="@patient.Id">@patient.UserName</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Add Connection</button>
+</form>

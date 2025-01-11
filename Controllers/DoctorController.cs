@@ -44,58 +44,70 @@ public async Task<IActionResult> ManagePatients()
 }
         
         [Authorize]
-        public async Task<IActionResult> MyAccount()
+public async Task<IActionResult> MyAccount()
+{
+    var user = await _userManager.GetUserAsync(User);
+    if (user == null)
+    {
+        return NotFound();
+    }
+
+    var doctor = await _context.Doctors.FirstOrDefaultAsync(d => d.Id == user.Id);
+    if (doctor == null)
+    {
+        return NotFound();
+    }
+
+    var model = new EditAccountViewModel
+    {
+        FullName = doctor.FullName,
+        Surname = doctor.Surname,
+        Email = doctor.Email,
+        DateOfBirth = doctor.DateOfBirth,
+        Specialty = doctor.Specialty,
+        LicenseNumber = doctor.LicenseNumber
+    };
+
+    return View(model);
+}
+
+        
+       [HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> MyAccount(EditAccountViewModel model)
+{
+    if (ModelState.IsValid)
+    {
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            var model = new EditAccountViewModel
-            {
-                FullName = user.FullName,
-                Surname = user.Surname,
-                Email = user.Email
-            };
-
-            return View(model);
+            return NotFound();
         }
 
-        // POST: /Doctor/MyAccount
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> MyAccount(EditAccountViewModel model)
+        var doctor = await _context.Doctors.FirstOrDefaultAsync(d => d.Id == user.Id);
+        if (doctor == null)
         {
-            if (ModelState.IsValid)
-            {
-                var user = await _userManager.GetUserAsync(User);
-                if (user == null)
-                {
-                    return NotFound();
-                }
-
-                user.FullName = model.FullName;
-                user.Surname = model.Surname;
-                user.Email = model.Email;
-
-                var result = await _userManager.UpdateAsync(user);
-                if (result.Succeeded)
-                {
-                    TempData["SuccessMessage"] = "Account updated successfully!";
-                    return RedirectToAction("MyAccount");
-                }
-
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-            }
-
-            return View(model);
+            return NotFound();
         }
 
-// DoctorController.cs
+        doctor.FullName = model.FullName;
+        doctor.Surname = model.Surname;
+        doctor.Email = model.Email;
+        doctor.DateOfBirth = (System.DateTime)model.DateOfBirth;
+        doctor.Specialty = model.Specialty;
+        doctor.LicenseNumber = model.LicenseNumber;
+
+        _context.Update(doctor);
+        await _context.SaveChangesAsync();
+
+        TempData["SuccessMessage"] = "Account updated successfully!";
+        return RedirectToAction("MyAccount");
+    }
+
+    return View(model);
+}
+
+
 [HttpGet]
 public async Task<IActionResult> EditPatient(string id)
 {

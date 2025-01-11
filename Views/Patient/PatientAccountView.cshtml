@@ -1,27 +1,36 @@
 @model HospitalManagement.ViewModels.EditAccountViewModel
 
+@{
+    ViewData["Title"] = "My Account";
+}
+
 <h2>My Account</h2>
 
-@using (Html.BeginForm("PatientAccountView", "Patient", FormMethod.Post))
-{
+<form asp-action="PatientAccountView" asp-controller="Patient" method="post">
     @Html.AntiForgeryToken()
 
-    <div>
-        <label for="FullName">Full Name:</label>
-        @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+    <div class="form-group">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control" placeholder="Enter your full name" required />
     </div>
-    <div>
-        <label for="Surname">Surname:</label>
-        @Html.TextBoxFor(m => m.Surname, new { @class = "form-control" })
+
+    <div class="form-group">
+        <label asp-for="Surname"></label>
+        <input asp-for="Surname" class="form-control" placeholder="Enter your surname" required />
     </div>
-    <div>
-        <label for="Email">Email:</label>
-        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" type="email" placeholder="Enter your email" required />
     </div>
-    <div>
-        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+
+    <div class="form-group">
+        <label asp-for="MedicalHistory"></label>
+        <textarea asp-for="MedicalHistory" class="form-control" placeholder="Enter medical history (optional)" rows="3"></textarea>
     </div>
-}
+
+    <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+</form>
 
 @if (TempData["SuccessMessage"] != null)
 {
