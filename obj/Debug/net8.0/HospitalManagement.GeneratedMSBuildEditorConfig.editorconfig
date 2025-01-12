@@ -284,20 +284,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaffs/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZnNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaff/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZlxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaffs/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZnNcRGVsZXRlLmNzaHRtbA==
+[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaff/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZlxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaffs/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZnNcRWRpdC5jc2h0bWw=
+[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaff/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZlxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaffs/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZnNcSW5kZXguY3NodG1s
+[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaff/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/dell/Documents/Spitali/hospitalManagment/Views/MedicalServices/Create.cshtml]

@@ -1,0 +1,23 @@
+@model HospitalManagement.Models.HospitalStaff
+
+<h2>Delete Hospital Staff</h2>
+
+<div>
+    <h4>Are you sure you want to delete this staff member?</h4>
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>@Model.Name</dd>
+        <dt>Position</dt>
+        <dd>@Model.Position</dd>
+        <dt>Department</dt>
+        <dd>@Model.Department</dd>
+        <dt>Working Hours</dt>
+        <dd>@Model.WorkingHours</dd>
+    </dl>
+    
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
