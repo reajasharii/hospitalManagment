@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using HospitalManagement.Models;
 using Microsoft.AspNetCore.Identity;
 
+
 namespace HospitalManagement.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>  
@@ -17,6 +18,9 @@ namespace HospitalManagement.Data
         public DbSet<Patient> Patients { get; set; }
         public DbSet<PatientDoctor> PatientDoctors { get; set; }
           public DbSet<Contact> Contacts { get; set; }
+          public DbSet<MedicalService> MedicalServices { get; set; }
+           public DbSet<HospitalStaff> HospitalStaffs { get; set; }
+
 
      
 

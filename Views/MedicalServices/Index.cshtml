@@ -1,0 +1,38 @@
+@model IEnumerable<HospitalManagement.Models.MedicalService>
+
+<h2>Medical Services</h2>
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Create New Service</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Category</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.Name</td>
+                <td>@service.Description</td>
+                <td>@service.Price</td>
+                <td>@service.Duration</td>
+                <td>@service.Category</td>
+                <td>@service.CreatedDate.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = service.Id })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", new { id = service.Id })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
