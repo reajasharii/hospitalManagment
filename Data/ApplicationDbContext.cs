@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace HospitalManagement.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>  // Change to ApplicationUser
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>  
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

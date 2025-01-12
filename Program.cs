@@ -9,12 +9,24 @@ using HospitalManagement.Services;
 using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<MySeedData>();
+builder.Services.AddLogging(); 
+builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("Smtp"));
+builder.Services.AddSingleton<IEmailSender, SmtpEmailSender>();
+
+
 
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -26,10 +38,11 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 .AddDefaultUI();
 
 
-builder.Services.AddRazorPages();
-builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<MySeedData>();
-builder.Services.AddLogging(); 
+
+
+
+
+
 
 var app = builder.Build();
 

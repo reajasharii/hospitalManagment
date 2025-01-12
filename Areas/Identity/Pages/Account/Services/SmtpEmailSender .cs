@@ -1,9 +1,9 @@
-using System;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Options;
+using System;
 
 namespace HospitalManagement.Services
 {
@@ -11,35 +11,41 @@ namespace HospitalManagement.Services
     {
         private readonly SmtpSettings _smtpSettings;
 
-        // Constructor to bind the settings
+        // Constructor to get SMTP settings from configuration
         public SmtpEmailSender(IOptions<SmtpSettings> smtpSettings)
         {
             _smtpSettings = smtpSettings.Value;
         }
 
+        // Implementing the SendEmailAsync method
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            if (string.IsNullOrEmpty(email))
+            var smtpClient = new SmtpClient(_smtpSettings.Host)
             {
-                throw new ArgumentNullException(nameof(email), "Email address cannot be null or empty.");
-            }
+                Port = _smtpSettings.Port,
+                Credentials = new NetworkCredential(_smtpSettings.User, _smtpSettings.Password),
+                EnableSsl = _smtpSettings.EnableSsl
+            };
 
-            var mailMessage = new MailMessage()
+            var mailMessage = new MailMessage
             {
-                From = new MailAddress(_smtpSettings.From), // Use the 'From' email from settings
+                From = new MailAddress(_smtpSettings.From),
                 Subject = subject,
                 Body = htmlMessage,
                 IsBodyHtml = true
             };
 
-            mailMessage.To.Add(new MailAddress(email)); // Adding recipient email
+            mailMessage.To.Add(email);
 
-            using (var smtpClient = new SmtpClient(_smtpSettings.Host, _smtpSettings.Port))
+            try
             {
-                smtpClient.Credentials = new NetworkCredential(_smtpSettings.User, _smtpSettings.Password);
-                smtpClient.EnableSsl = _smtpSettings.EnableSsl;
-
+                // Send the email asynchronously
                 await smtpClient.SendMailAsync(mailMessage);
+            }
+            catch (Exception ex)
+            {
+                // Log or handle the exception as needed
+                throw new InvalidOperationException($"Failed to send email. Error: {ex.Message}", ex);
             }
         }
     }
