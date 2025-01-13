@@ -1,0 +1,28 @@
+@model IEnumerable<NoteViewModel>
+
+<h2>Your Notes</h2>
+
+@if (!Model.Any())
+{
+    <p>No notes available.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Note</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var note in Model)
+            {
+                <tr>
+                    <td>@note.Content</td>
+                    <td>@note.CreatedAt?.ToString("g")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

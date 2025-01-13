@@ -174,6 +174,31 @@ public async Task<IActionResult> DisconnectFromDoctor(string doctorId)
     return RedirectToAction("ConnectToDoctor");
 }
 
+[HttpGet]
+public async Task<IActionResult> ViewNotes()
+{
+    var patientId = _userManager.GetUserId(User); // Get the current logged-in patient's ID
+
+    // Get the list of connected doctors for this patient
+    var connectedDoctors = await _context.PatientDoctors
+        .Where(pd => pd.PatientId == patientId) // Filter by patient
+        .Select(pd => pd.DoctorId) // Get only the DoctorIds
+        .ToListAsync();
+
+    // Fetch notes for the connected doctors only
+    var notes = await _context.Notes
+        .Where(n => connectedDoctors.Contains(n.DoctorId) && n.PatientId == patientId) // Filter notes by connected doctors and the current patient
+        .Select(n => new NoteViewModel
+        {
+            Content = n.Content,
+            CreatedAt = n.CreatedAt
+        })
+        .ToListAsync();
+
+    return View(notes);
+}
+
+
 
 
     

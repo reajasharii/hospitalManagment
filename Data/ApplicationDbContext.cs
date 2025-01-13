@@ -22,6 +22,8 @@ namespace HospitalManagement.Data
           
     public DbSet<HospitalStaff> HospitalStaff { get; set; }
      public DbSet<HospitalStaff> HospitalStaffs { get; set; }  
+     public DbSet<Note> Notes { get; set; }
+
 
      
 

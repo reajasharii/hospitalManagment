@@ -4,7 +4,9 @@ using HospitalManagement.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -315,6 +317,93 @@ public async Task<IActionResult> CreatePatient(CreatePatientViewModel model)
 
 
 
+
+
+[HttpGet]
+public async Task<IActionResult> SendNote()
+{
+    var doctorId = _userManager.GetUserId(User); // Get the current logged-in doctor's ID
+
+    // Get the list of patients connected to the doctor
+    var patients = await _context.PatientDoctors
+        .Where(pd => pd.DoctorId == doctorId)  // Filter by the current doctor's ID
+        .Select(pd => new SelectListItem
+        {
+            Value = pd.PatientId,
+            Text = pd.PatientFullName
+        })
+        .ToListAsync();
+
+    // Pass the list of connected patients to the view
+    ViewBag.Patients = new SelectList(patients, "Value", "Text");
+
+    return View();
+}
+
+
+
+[HttpPost]
+public async Task<IActionResult> SendNote(NoteViewModel model)
+{
+    // Ensure DoctorId is correctly set before any logic
+    var doctorId = _userManager.GetUserId(User); // Get the DoctorId from the current logged-in user
+
+    try
+    {
+        if (ModelState.IsValid)
+        {
+            // Ensure that PatientId and Content are set properly
+            if (string.IsNullOrEmpty(model.PatientId) || string.IsNullOrEmpty(model.Content))
+            {
+                TempData["ErrorMessage"] = "Patient or Note content is missing.";
+                return View(model); // Return to the same page with error message
+            }
+
+            // Create and save the note
+            var note = new Note
+            {
+                DoctorId = doctorId, // Use the doctorId we retrieved
+                PatientId = model.PatientId,
+                Content = model.Content,
+                CreatedAt = DateTime.Now
+            };
+
+            _context.Notes.Add(note);
+            await _context.SaveChangesAsync();
+
+            // Success message
+            TempData["SuccessMessage"] = "Note sent successfully!";
+            return RedirectToAction("SendNote"); // Redirect to avoid resubmission on page reload
+        }
+
+        // Log validation errors if any
+        foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+        {
+            Console.WriteLine(error.ErrorMessage);
+        }
+
+        // If validation fails, reload patient list and show error message
+        var patients = await _context.PatientDoctors
+            .Where(pd => pd.DoctorId == doctorId)
+            .Select(pd => new SelectListItem
+            {
+                Value = pd.PatientId,
+                Text = pd.PatientFullName
+            })
+            .ToListAsync();
+
+        ViewBag.Patients = new SelectList(patients, "Value", "Text");
+
+        TempData["ErrorMessage"] = "Failed to send the note. Please try again.";
+        return View(model);
+    }
+    catch (Exception ex)
+    {
+        // Handle unexpected errors
+        TempData["ErrorMessage"] = "An error occurred: " + ex.Message;
+        return View(model);
+    }
+}
 
 
 

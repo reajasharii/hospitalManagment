@@ -53,7 +53,6 @@ C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Mic
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\MimeKit.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Newtonsoft.Json.dll
@@ -73,15 +72,12 @@ C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Sys
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\ar\Humanizer.resources.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -227,12 +223,8 @@ C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\run
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
-C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\HospitalManagement\HospitalManagement\obj\Debug\net8.0\HospitalManagement.AssemblyInfoInputs.cache
@@ -784,3 +776,10 @@ C:\Users\dell\Documents\Spitali\hospitalManagment\obj\Debug\net8.0\refint\Hospit
 C:\Users\dell\Documents\Spitali\hospitalManagment\obj\Debug\net8.0\HospitalManagement.pdb
 C:\Users\dell\Documents\Spitali\hospitalManagment\obj\Debug\net8.0\HospitalManagement.genruntimeconfig.cache
 C:\Users\dell\Documents\Spitali\hospitalManagment\obj\Debug\net8.0\ref\HospitalManagement.dll
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\User\Desktop\HospitalManagement\HospitalManagement\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
