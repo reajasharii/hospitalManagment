@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\HospitalManagement.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\Spitali\\hospitalManagment\\HospitalManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\HospitalManagement.csproj": {
+    "C:\\Users\\Dell\\Desktop\\Spitali\\hospitalManagment\\HospitalManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\HospitalManagement.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\Spitali\\hospitalManagment\\HospitalManagement.csproj",
         "projectName": "HospitalManagement",
-        "projectPath": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\HospitalManagement.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\Spitali\\hospitalManagment\\HospitalManagement.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\Spitali\\hospitalManagment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
