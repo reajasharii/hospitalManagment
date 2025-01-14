@@ -1,0 +1,14 @@
+@model HospitalManagement.Models.Contact
+
+@{
+    ViewData["Title"] = "Contact Details";
+}
+
+<h1>@Model.FirstName @Model.LastName</h1>
+
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>Phone:</strong> @Model.PhoneNumber</p>
+<p><strong>Reason for Contact:</strong> @Model.ReasonForContact</p>
+<p><strong>Description:</strong> @Model.Description</p>
+
+<a href="@Url.Action("Index")" class="btn btn-primary">Back to List</a>

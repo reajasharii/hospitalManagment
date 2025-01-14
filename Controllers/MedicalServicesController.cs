@@ -89,28 +89,39 @@ namespace HospitalManagement.Controllers
             return View(service);
         }
 
-        // GET: MedicalServices/Delete/5
-        public IActionResult Delete(int id)
-        {
-            var service = _context.MedicalServices.Find(id);
-            if (service == null)
-                return NotFound();
+// GET: MedicalServices/Delete/5
+public IActionResult Delete(int id)
+{
+    var service = _context.MedicalServices.FirstOrDefault(m => m.Id == id);
+    if (service == null)
+        return NotFound();
 
-            return View(service);
-        }
+    return View(service);
+}
 
-        // POST: MedicalServices/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            var service = _context.MedicalServices.Find(id);
-            if (service == null)
-                return NotFound();
+// POST: MedicalServices/Delete/5
+[HttpPost, ActionName("Delete")]
+[ValidateAntiForgeryToken]
+public IActionResult DeleteConfirmed(int id)
+{
+    var service = _context.MedicalServices.FirstOrDefault(m => m.Id == id);
+    if (service == null)
+        return NotFound();
 
-            _context.MedicalServices.Remove(service);
-            _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
-        }
+    try
+    {
+        _context.MedicalServices.Remove(service);
+        _context.SaveChanges();
+    }
+    catch (DbUpdateException)
+    {
+        ModelState.AddModelError(string.Empty, "Unable to delete. The service might be referenced by other entities.");
+        return View(service);
+    }
+
+    return RedirectToAction(nameof(Index));
+}
+
+
     }
 }

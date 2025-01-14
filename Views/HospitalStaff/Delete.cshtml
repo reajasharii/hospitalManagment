@@ -14,10 +14,10 @@
         <dt>Working Hours</dt>
         <dd>@Model.WorkingHours</dd>
     </dl>
-    
-    <form asp-action="DeleteConfirmed" method="post">
-        <input type="hidden" asp-for="Id" />
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
         <button type="submit" class="btn btn-danger">Delete</button>
-        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
     </form>
 </div>

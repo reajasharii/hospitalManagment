@@ -89,6 +89,11 @@ app.MapControllerRoute(
     pattern: "Admin/EditPatient/{id?}",
     defaults: new { controller = "Admin", action = "EditPatient" });
 
+    app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Menu}/{action=Index}/{id?}");
+
+
 
 app.MapRazorPages();
 

@@ -89,28 +89,38 @@ public IActionResult Create(HospitalStaff staff)
             return View(staff);
         }
 
-        // GET: HospitalStaff/Delete/5
-        public IActionResult Delete(int id)
-        {
-            var staff = _context.HospitalStaff.Find(id);
-            if (staff == null)
-                return NotFound();
+ // GET: HospitalStaff/Delete/5
+public IActionResult Delete(int id)
+{
+    var staff = _context.HospitalStaff.FirstOrDefault(h => h.Id == id);
+    if (staff == null)
+        return NotFound();
+    return View(staff);
+}
 
-            return View(staff);
-        }
+// POST: HospitalStaff/Delete/5
+[HttpPost, ActionName("Delete")]
+[ValidateAntiForgeryToken]
+public IActionResult DeleteConfirmed(int id)
+{
+    var staff = _context.HospitalStaff.FirstOrDefault(h => h.Id == id);
+    if (staff == null)
+        return NotFound();
 
-        // POST: HospitalStaff/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            var staff = _context.HospitalStaff.Find(id);
-            if (staff == null)
-                return NotFound();
+    try
+    {
+        _context.HospitalStaff.Remove(staff);
+        _context.SaveChanges();
+    }
+    catch (DbUpdateException)
+    {
+        ModelState.AddModelError(string.Empty, "Unable to delete. The staff might be referenced by other entities.");
+        return View(staff);
+    }
 
-            _context.HospitalStaff.Remove(staff);
-            _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
-        }
+    return RedirectToAction(nameof(Index));
+}
+
+
     }
 }

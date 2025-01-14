@@ -17,7 +17,7 @@ namespace HospitalManagement.Data
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<PatientDoctor> PatientDoctors { get; set; }
-          public DbSet<Contact> Contacts { get; set; }
+          public DbSet<Contact> Contact { get; set; }
           public DbSet<MedicalService> MedicalServices { get; set; }
           
     public DbSet<HospitalStaff> HospitalStaff { get; set; }
