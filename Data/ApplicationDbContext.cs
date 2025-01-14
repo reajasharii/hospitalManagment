@@ -2,12 +2,17 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using HospitalManagement.Models;
 using Microsoft.AspNetCore.Identity;
+using HospitalManagement.Controllers;
 
 
 namespace HospitalManagement.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>  
     {
+        public ApplicationDbContext()
+        {
+        }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -22,8 +27,9 @@ namespace HospitalManagement.Data
           
     public DbSet<HospitalStaff> HospitalStaff { get; set; }
      public DbSet<HospitalStaff> HospitalStaffs { get; set; }  
+public DbSet<Departments> Departments { get; set; }
 
-     
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
@@ -49,5 +55,10 @@ namespace HospitalManagement.Data
         .HasIndex(pd => pd.DoctorFullName);
 }
 
+    }
+
+    public class Department
+    {
+        public int Id { get; internal set; }
     }
 }
