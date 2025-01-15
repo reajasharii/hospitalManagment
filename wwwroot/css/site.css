@@ -1,22 +1,22 @@
 /* Header Styling */
 .custom-header {
-  background-color: #007bff; /* Ngjyra e kaltër për header-in */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hije e lehtë për header */
+  background-color: #007bff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .custom-header .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #fff; /* Ngjyra e bardhë për brand */
-  transition: color 0.3s ease; /* Efekt i kalimit të ngjyrës */
+  color: #fff; 
+  transition: color 0.3s ease; 
 }
 
 .custom-header .navbar-brand:hover {
-  color: #d4e0f7; /* Efekti i kalimit të ngjyrës për brand */
+  color: #d4e0f7; 
 }
 
 .custom-header .navbar-nav .nav-link {
-  color: #fff; /* Ngjyra e bardhë për lidhjet e navbar-it */
+  color: #fff; 
   font-size: 1.1rem;
   font-weight: 500;
   padding-left: 1rem;
@@ -25,7 +25,7 @@
 }
 
 .custom-header .navbar-nav .nav-link:hover {
-  color: #d4e0f7; /* Efekti i kalimit të ngjyrës për lidhjet */
+  color: #d4e0f7; 
 }
 
 .custom-header .btn-outline-primary {
@@ -36,7 +36,7 @@
 }
 
 .custom-header .btn-outline-primary:hover {
-  background-color: #0056b3; /* Ngjyrë më e errët në hover */
+  background-color: #0056b3; 
   border-color: #0056b3;
   color: #fff;
 }
@@ -46,10 +46,10 @@
 }
 
 .navbar-toggler-icon {
-  background-color: #fff; /* Ngjyra e ikonës për toggle */
+  background-color: #fff; 
 }
 
-/* Mobile Responsive Styling */
+
 @media (max-width: 768px) {
   .custom-header .navbar-nav {
       margin-top: 1rem;
@@ -67,28 +67,28 @@
 
 /* Footer Styling */
 .footer {
-  background-color: #343a40; /* Ngjyrë e errët për footer */
-  color: #f8f9fa; /* Ngjyrë e bardhë për tekstin e footer-it */
-  padding: 2rem 0; /* Hapësirë e mjaftueshme në lartësi */
-  text-align: center; /* Teksti në qendër */
+  background-color: #343a40;
+  color: #f8f9fa; 
+  padding: 2rem 0; 
+  text-align: center; 
   font-size: 1rem;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Hije e lehtë në pjesën e sipërme të footer-it */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); 
   display: flex;
-  justify-content: center; /* Qendron përmbajtja në mes */
+  justify-content: center; 
   align-items: center;
-  flex-direction: column; /* Elementet janë në kolonë */
+  flex-direction: column; 
 }
 
 .footer a {
-  color: #f8f9fa; /* Ngjyra e lidhjeve në footer */
-  text-decoration: none; /* Pa nënvizon për lidhjet */
-  font-weight: 500; /* Pesha e fontit për lidhjet */
-  transition: color 0.3s ease; /* Efekt kalimi për lidhjet */
-  margin-top: 0.5rem; /* Hapësirë midis lidhjeve */
+  color: #f8f9fa;
+  text-decoration: none; 
+  font-weight: 500; 
+  transition: color 0.3s ease; 
+  margin-top: 0.5rem; 
 }
 
 .footer a:hover {
-  color: #007bff; /* Ngjyra e kalimit për lidhjet */
+  color: #007bff; 
 }
 
 .footer .container {
@@ -99,17 +99,17 @@
 }
 
 .footer .container p {
-  margin: 0.5rem 0; /* Hapësirë midis elementeve të paragrafëve */
+  margin: 0.5rem 0; 
 }
 
 /* Mobile Responsive Footer */
 @media (max-width: 768px) {
   .footer {
-      font-size: 0.9rem; /* Pak më e vogël për pajisjet mobile */
-      padding: 1.5rem 0; /* Pak më e vogël për pajisjet mobile */
+      font-size: 0.9rem; 
+      padding: 1.5rem 0; 
   }
 
   .footer .container {
-      text-align: center; /* Siguro që footer-i të duket i rregulluar në pajisje mobile */
+      text-align: center; 
   }
 }

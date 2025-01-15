@@ -1,13 +1,13 @@
 /* General Styles for Manage Admins Page */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9; /* Ngjyrë e butë për sfondin */
-    color: #333; /* Ngjyrë e errët për tekstin */
+    background-color: #f4f6f9; 
+    color: #333; 
 }
 
 /* Title */
 h2 {
-    color: #0056b3; /* Ngjyra blu për titujt */
+    color: #0056b3; 
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -61,7 +61,7 @@ h2 {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
-    background-color: #fff; /* Background color of the table */
+    background-color: #fff; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -80,14 +80,14 @@ h2 {
 }
 
 .table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alternating row colors */
+    background-color: #f9f9f9; 
 }
 
 .table tr:hover {
-    background-color: #f1f1f1; /* Light hover effect */
+    background-color: #f1f1f1; 
 }
 
-/* Actions Column */
+
 .table td a {
     margin-right: 10px;
 }

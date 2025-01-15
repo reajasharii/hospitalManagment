@@ -1,20 +1,22 @@
 <!-- Patient Sidebar (PatientSideBar.cshtml) -->
 <div class="sidebar">
     <ul class="list-group">
-        <li class="list-group-item">
-            <a href="@Url.Action("ManageAppointments", "Patient")" class="text-decoration-none text-dark">Manage Appointments</a>
-        </li>
-        <li class="list-group-item">
+    
+        @* <li class="list-group-item">
             <a href="@Url.Action("ViewMedicalHistory", "Patient")" class="text-decoration-none text-dark">View Medical History</a>
         </li>
-        <li class="list-group-item">
-            <a href="@Url.Action("PatientAccountView", "Patient")" class="text-decoration-none text-dark">My Account</a>
-        </li>
+        *@
         <li class="list-group-item">
             <a href="@Url.Action("ConnectToDoctor", "Patient")" class="text-decoration-none text-dark">Manage Doctor Connections</a>
         </li>
          <li class="list-group-item">
             <a href="@Url.Action("ViewNotes", "Patient")" class="text-decoration-none text-dark">View Notes form Doctor Connections</a>
+        </li>
+         <li class="list-group-item">
+            <a href="@Url.Action("Create", "Appointments")" class="text-decoration-none text-dark">Assign the Appointment</a>
+        </li>
+         <li class="list-group-item">
+            <a href="@Url.Action("PatientAccountView", "Patient")" class="text-decoration-none text-dark">My Account</a>
         </li>
     </ul>
 </div>

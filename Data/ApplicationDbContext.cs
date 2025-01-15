@@ -25,6 +25,8 @@ namespace HospitalManagement.Data
 
           public DbSet<Departments> Departments { get; set; }  
      public DbSet<Note> Notes { get; set; }
+     public DbSet<Appointment> Appointments { get; set; }
+
 
 
      
@@ -46,6 +48,7 @@ namespace HospitalManagement.Data
         .WithMany(d => d.PatientDoctors)
         .HasForeignKey(pd => pd.DoctorId);
 
+          
     // Optional: Add indices for FullName columns to optimize searching by name
     modelBuilder.Entity<PatientDoctor>()
         .HasIndex(pd => pd.PatientFullName);
@@ -54,4 +57,6 @@ namespace HospitalManagement.Data
 }
 
     }
+
+    
 }

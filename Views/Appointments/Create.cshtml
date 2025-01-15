@@ -1,0 +1,42 @@
+@model HospitalManagement.Models.Appointment
+
+<h2>Assign Appointment</h2>
+
+<!-- Display success message if TempData has a message -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input type="text" class="form-control" id="FirstName" name="FirstName" required />
+    </div>
+    <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input type="text" class="form-control" id="LastName" name="LastName" required />
+    </div>
+    <div class="form-group">
+        <label for="AppointmentDate">Appointment Date</label>
+        <input type="datetime-local" class="form-control" id="AppointmentDate" name="AppointmentDate" required />
+    </div>
+    <div class="form-group">
+        <label for="Reason">Reason for Visit</label>
+        <textarea class="form-control" id="Reason" name="Reason"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="Department">Department</label>
+        <select class="form-control" id="Department" name="Department" required>
+            <option value="">Select Department</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Oncology">Oncology</option>
+            <option value="Orthopedics">Orthopedics</option>
+            <option value="Radiology">Radiology</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Assign</button>
+</form>
