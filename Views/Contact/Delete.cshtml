@@ -1,0 +1,27 @@
+@model HospitalManagement.Models.Contact
+
+<h2>Delete Contact</h2>
+
+<div>
+    <h4>Are you sure you want to delete this contact?</h4>
+    <dl class="dl-horizontal">
+        <dt>First Name</dt>
+        <dd>@Model.FirstName</dd>
+        <dt>Last Name</dt>
+        <dd>@Model.LastName</dd>
+        <dt>Email</dt>
+        <dd>@Model.Email</dd>
+        <dt>Phone Number</dt>
+        <dd>@Model.PhoneNumber</dd>
+        <dt>Reason for Contact</dt>
+        <dd>@Model.ReasonForContact</dd>
+        <dt>Description</dt>
+        <dd>@Model.Description</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

@@ -15,14 +15,14 @@ namespace HospitalManagement.Controllers
             _context = context;
         }
 
-        // GET: MedicalServices
+
         public IActionResult Index()
         {
             var services = _context.MedicalServices.ToList();
             return View(services);
         }
 
-        // GET: MedicalServices/Details/5
+
         public IActionResult Details(int id)
         {
             var service = _context.MedicalServices.Find(id);
@@ -32,13 +32,13 @@ namespace HospitalManagement.Controllers
             return View(service);
         }
 
-        // GET: MedicalServices/Create
+
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: MedicalServices/Create
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(MedicalService service)
@@ -52,7 +52,7 @@ namespace HospitalManagement.Controllers
             return View(service);
         }
 
-        // GET: MedicalServices/Edit/5
+
         public IActionResult Edit(int id)
         {
             var service = _context.MedicalServices.Find(id);
@@ -61,8 +61,6 @@ namespace HospitalManagement.Controllers
 
             return View(service);
         }
-
-        // POST: MedicalServices/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, MedicalService service)
@@ -89,28 +87,39 @@ namespace HospitalManagement.Controllers
             return View(service);
         }
 
-        // GET: MedicalServices/Delete/5
+
         public IActionResult Delete(int id)
         {
-            var service = _context.MedicalServices.Find(id);
+            var service = _context.MedicalServices.FirstOrDefault(m => m.Id == id);
             if (service == null)
                 return NotFound();
 
             return View(service);
         }
 
-        // POST: MedicalServices/Delete/5
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            var service = _context.MedicalServices.Find(id);
+            var service = _context.MedicalServices.FirstOrDefault(m => m.Id == id);
             if (service == null)
                 return NotFound();
 
-            _context.MedicalServices.Remove(service);
-            _context.SaveChanges();
+            try
+            {
+                _context.MedicalServices.Remove(service);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ModelState.AddModelError(string.Empty, "Unable to delete. The service might be referenced by other entities.");
+                return View(service);
+            }
+
             return RedirectToAction(nameof(Index));
         }
+
+
     }
 }

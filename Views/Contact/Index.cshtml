@@ -1,0 +1,36 @@
+@model IEnumerable<HospitalManagement.Models.Contact>
+
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+<h1>Contacts</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Reason</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td>@contact.FirstName</td>
+                <td>@contact.LastName</td>
+                <td>@contact.Email</td>
+                <td>@contact.PhoneNumber</td>
+                <td>@contact.ReasonForContact</td>
+                <td>
+                    <a href="@Url.Action("Details", new { id = contact.Id })">Details</a> |
+                    <a href="@Url.Action("Delete", new { id = contact.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

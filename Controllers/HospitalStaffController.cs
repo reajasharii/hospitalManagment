@@ -15,14 +15,14 @@ namespace HospitalManagement.Controllers
             _context = context;
         }
 
-        // GET: HospitalStaff
+
         public IActionResult Index()
         {
             var staff = _context.HospitalStaff.ToList();
             return View(staff);
         }
 
-        // GET: HospitalStaff/Details/5
+
         public IActionResult Details(int id)
         {
             var staff = _context.HospitalStaff.Find(id);
@@ -32,27 +32,26 @@ namespace HospitalManagement.Controllers
             return View(staff);
         }
 
-        // GET: HospitalStaff/Create
+
         public IActionResult Create()
         {
             return View();
         }
 
-      [HttpPost]
-[ValidateAntiForgeryToken]
-public IActionResult Create(HospitalStaff staff)
-{
-    if (ModelState.IsValid)
-    {
-        _context.Add(staff);  // Add the staff object to the context
-        _context.SaveChanges();  // Save the changes to the database
-        return RedirectToAction(nameof(Index));  // Redirect to the index page
-    }
-    return View(staff);  // If validation fails, return the view with the staff object
-}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(HospitalStaff staff)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(staff);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(staff);
+        }
 
 
-        // GET: HospitalStaff/Edit/5
         public IActionResult Edit(int id)
         {
             var staff = _context.HospitalStaff.Find(id);
@@ -62,7 +61,7 @@ public IActionResult Create(HospitalStaff staff)
             return View(staff);
         }
 
-        // POST: HospitalStaff/Edit/5
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, HospitalStaff staff)
@@ -89,28 +88,38 @@ public IActionResult Create(HospitalStaff staff)
             return View(staff);
         }
 
-        // GET: HospitalStaff/Delete/5
+
         public IActionResult Delete(int id)
         {
-            var staff = _context.HospitalStaff.Find(id);
+            var staff = _context.HospitalStaff.FirstOrDefault(h => h.Id == id);
             if (staff == null)
                 return NotFound();
-
             return View(staff);
         }
 
-        // POST: HospitalStaff/Delete/5
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            var staff = _context.HospitalStaff.Find(id);
+            var staff = _context.HospitalStaff.FirstOrDefault(h => h.Id == id);
             if (staff == null)
                 return NotFound();
 
-            _context.HospitalStaff.Remove(staff);
-            _context.SaveChanges();
+            try
+            {
+                _context.HospitalStaff.Remove(staff);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateException)
+            {
+                ModelState.AddModelError(string.Empty, "Unable to delete. The staff might be referenced by other entities.");
+                return View(staff);
+            }
+
             return RedirectToAction(nameof(Index));
         }
+
+
     }
 }
