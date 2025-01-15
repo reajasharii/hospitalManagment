@@ -89,6 +89,13 @@ app.MapControllerRoute(
     pattern: "Admin/EditPatient/{id?}",
     defaults: new { controller = "Admin", action = "EditPatient" });
 
+   app.MapControllerRoute(
+    name: "PrivacyPolicy",
+    pattern: "Home/Privacy",
+    defaults: new { controller = "Home", action = "Privacy" }
+);
+
+
 
 app.MapRazorPages();
 

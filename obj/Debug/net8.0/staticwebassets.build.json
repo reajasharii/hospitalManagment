@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jDN2t5Vw2aAwtl2gJZu36sm619lGaE724jUoZDqduN0=",
+  "Hash": "e370VNPkLYSWpCHwtPJUFj9KqcOzMGnNODm9Kd0v+X0=",
   "Source": "HospitalManagement",
   "BasePath": "_content/HospitalManagement",
   "Mode": "Default",
@@ -2199,6 +2199,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\manage.css"
+    },
+    {
+      "Identity": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\privacy.css",
+      "SourceId": "HospitalManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\",
+      "BasePath": "_content/HospitalManagement",
+      "RelativePath": "css/privacy#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a2sywsgfiq",
+      "Integrity": "bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\privacy.css"
     },
     {
       "Identity": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\sidebar.css",
@@ -7722,6 +7743,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-bJKloFG8er4oaWCfJFB6dA88eeh9o8MPBDu4zoVnfdg="
+        }
+      ]
+    },
+    {
+      "Route": "css/privacy.a2sywsgfiq.css",
+      "AssetFile": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\privacy.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 16:43:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a2sywsgfiq"
+        },
+        {
+          "Name": "label",
+          "Value": "css/privacy.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY="
+        }
+      ]
+    },
+    {
+      "Route": "css/privacy.css",
+      "AssetFile": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\privacy.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 16:43:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY="
         }
       ]
     },

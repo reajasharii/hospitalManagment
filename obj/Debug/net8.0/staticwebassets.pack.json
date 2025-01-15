@@ -173,6 +173,10 @@
       "PackagePath": "staticwebassets\\css\\manage.css"
     },
     {
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\privacy.css",
+      "PackagePath": "staticwebassets\\css\\privacy.css"
+    },
+    {
       "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\sidebar.css",
       "PackagePath": "staticwebassets\\css\\sidebar.css"
     },

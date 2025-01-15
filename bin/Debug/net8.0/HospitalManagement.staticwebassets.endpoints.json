@@ -5749,6 +5749,88 @@
       ]
     },
     {
+      "Route": "css/privacy.a2sywsgfiq.css",
+      "AssetFile": "css/privacy.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 16:43:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a2sywsgfiq"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY="
+        },
+        {
+          "Name": "label",
+          "Value": "css/privacy.css"
+        }
+      ]
+    },
+    {
+      "Route": "css/privacy.css",
+      "AssetFile": "css/privacy.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 15 Jan 2025 16:43:03 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr+Eon+cTbQoYY="
+        }
+      ]
+    },
+    {
       "Route": "css/sidebar.2if64pgwo8.css",
       "AssetFile": "css/sidebar.css",
       "Selectors": [],

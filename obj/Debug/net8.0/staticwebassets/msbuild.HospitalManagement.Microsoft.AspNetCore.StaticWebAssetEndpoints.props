@@ -504,6 +504,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bJKloFG8er4oaWCfJFB6dA88eeh9o8MPBDu4zoVnfdg="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3336"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022bJKloFG8er4oaWCfJFB6dA88eeh9o8MPBDu4zoVnfdg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 15 Jan 2025 15:43:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HospitalManagement/css/privacy.a2sywsgfiq.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\privacy.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a2sywsgfiq"},{"Name":"integrity","Value":"sha256-bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr\u002BEon\u002BcTbQoYY="},{"Name":"label","Value":"_content/HospitalManagement/css/privacy.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"262"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr\u002BEon\u002BcTbQoYY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 15 Jan 2025 16:43:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HospitalManagement/css/privacy.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\privacy.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr\u002BEon\u002BcTbQoYY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"262"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022bm2Ij/lICtG0HvME2JM8nZ6utjQfyEr\u002BEon\u002BcTbQoYY=\u0022"},{"Name":"Last-Modified","Value":"Wed, 15 Jan 2025 16:43:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HospitalManagement/css/sidebar.2if64pgwo8.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\sidebar.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
