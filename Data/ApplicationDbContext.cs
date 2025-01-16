@@ -23,6 +23,7 @@ namespace HospitalManagement.Data
         public DbSet<Departments> Departments { get; set; }
         public DbSet<Note> Notes { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+            public DbSet<AboutUsContent> AboutUsContent { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

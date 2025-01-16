@@ -1,0 +1,16 @@
+@model HospitalManagement.Models.AboutUsContent
+
+<h2> About Us Content</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title" name="Title" asp-for="Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea class="form-control" id="Description" name="Description" asp-for="Description" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+

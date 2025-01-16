@@ -1,0 +1,19 @@
+@model HospitalManagement.Models.AboutUsContent
+
+<h2>Edit About Us Content</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="Title" name="Title" asp-for="Title" required />
+    </div>
+    
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea class="form-control" id="Description" name="Description" asp-for="Description" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

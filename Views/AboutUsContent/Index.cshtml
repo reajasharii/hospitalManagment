@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management - Doctors</title>
+  <style>
+        /* General section styles */
+        .default {
+            background-color: #f1f1f1;
+        }
+
+        .dark {
+            background-color: #333;
+            color: white;
+        }
+
+        .bg-doctors {
+            padding: 50px 0;
+        }
+
+        .section-doctorsArea {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section-desc {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .section-body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-doctors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .sliders {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        /* Individual doctor box styling */
+        .slide {
+            background-color: #fff;
+            width: 280px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .slide:hover {
+            transform: translateY(-10px);
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .section-doctor--name {
+            font-size: 22px;
+            color: #ff6600;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section-doctor--role {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .section-doctor--media a {
+            margin: 0 5px;
+        }
+
+        .section-doctor--media img {
+            width: 20px;
+            height: auto;
+        }
+
+        .location-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .location-section h2 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        .location-description {
+            width: 50%;
+        }
+
+        .location-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            max-width: 350px; 
+        }
+
+        .location-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .location-text {
+            font-size: 16px;
+        }
+
+        .banner {
+            margin: auto;
+            height: calc(100vh - 100px);
+            min-height: 340px;
+            background-color: rgb(59, 59, 59);
+            background-image: url("../images/clinic.jpg");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+   
+        .section-desc img {
+            width: 40%; 
+            height: auto;
+            border-radius: 20px; 
+            margin-bottom: 20px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        }
+    </style>
+</head>
+<body>
+    <section class="default dark bg-doctors" id="doctors">
+        <div class="section-doctorsArea">
+            <div class="section-title">Doctors</div>
+            <div class="section-desc">
+                <img src="./assets/images/dep4.jpg" alt="Doctors Image" />
+                Our Professional Staff
+                <br>
+                "Our team consists of highly qualified specialists from various medical fields, each bringing years of expertise to
+                ensure the best possible care for our patients. With advanced academic qualifications and extensive professional
+                experience, our medical professionals are dedicated to providing the highest standard of healthcare. 
+                They stay up-to-date with the latest medical advancements and use state-of-the-art technology to deliver 
+                effective treatments and personalized care. Our multidisciplinary approach allows us to address complex health 
+                concerns with precision, ensuring every patient receives comprehensive and compassionate care tailored to their 
+                individual needs."
+            </div>
+            <div class="section-body">
+                <div class="section-doctors">
+                    <div class="sliders">
+                        <!-- Loop through the About Us content -->
+                        @foreach (var content in Model)
+                        {
+                            <div class="slide">
+                                <div class="slideArea">
+                                    <!-- Dynamically filling content -->
+                                    <div class="section-doctor--name">@content.Title</div>
+                                    <div class="section-doctor--role">@content.Description</div>
+                                    <div class="section-doctor--media">
+                                        <!-- Social media or contact links can go here -->
+                                    </div>
+                                    <!-- Show Edit/Delete buttons only if the user is an admin -->
+                                    @if (ViewBag.IsAdmin != null && ViewBag.IsAdmin)
+                                    {
+                                        <div class="section-doctor--actions">
+                                            <a href="@Url.Action("Edit", "AboutUsContent", new { id = content.Id })" class="btn btn-primary">Edit</a>
+                                            <a href="@Url.Action("Delete", "AboutUsContent", new { id = content.Id })" class="btn btn-danger">Delete</a>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-section">
+        <div class="location-description">
+            <h2>Hospital Location</h2>
+            <p class="location-text">Our hospital is located in the heart of the city, easily accessible for patients from all around the area. Whether you are coming by car, public transport, or on foot, you will find our hospital in a central location with plenty of parking space.</p>
+        </div>
+        <div class="location-photo">
+            <img src="./assets/images/clinic.jpg" alt="Hospital Location"/>
+        </div>
+    </section>
+</body>
+</html>
+
