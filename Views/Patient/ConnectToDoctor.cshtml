@@ -1,6 +1,6 @@
 @model List<HospitalManagement.ViewModels.DoctorViewModel>
 
-<h2>Connect to a Doctor</h2>
+<h2>Manage Connections</h2>
 
 <!-- Search Form -->
 <form method="get" class="mb-4">
@@ -33,7 +33,7 @@
                 @if (doctorViewModel.IsConnected)
                 {
                     <p class="text-success">You are connected to this doctor.</p>
-                    <form asp-action="DisconnectFromDoctor" method="post">
+                    <form asp-action="DisconnectFeedbackForm" method="get">
                         <input type="hidden" name="doctorId" value="@doctorViewModel.Doctor.Id" />
                         <button type="submit" class="btn btn-danger">Disconnect</button>
                     </form>
