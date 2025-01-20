@@ -1,576 +1,580 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HospitalManagement.bundle.scp.css",
-      "PackagePath": "staticwebassets\\HospitalManagement.bundle.scp.css"
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HospitalManagement.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HospitalManagement.mp7u3xn23y.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\css\\style.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\arroba.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\arroba.png",
       "PackagePath": "staticwebassets\\assets\\images\\arroba.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\balao.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\balao.png",
       "PackagePath": "staticwebassets\\assets\\images\\balao.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\bg.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\bg.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\carta.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\carta.png",
       "PackagePath": "staticwebassets\\assets\\images\\carta.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\check.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\check.png",
       "PackagePath": "staticwebassets\\assets\\images\\check.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\clinic.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\clinic.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\clinic.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dep1.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dep1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\dep1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dep2.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dep2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\dep2.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dep3.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dep3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\dep3.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dep4.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dep4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\dep4.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dep5.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dep5.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\dep5.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dep6.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dep6.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\dep6.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dr1.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dr1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\dr1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dr3.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dr3.png",
       "PackagePath": "staticwebassets\\assets\\images\\dr3.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\dr4.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\dr4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\dr4.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\estrela.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\estrela.png",
       "PackagePath": "staticwebassets\\assets\\images\\estrela.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\facebook.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\facebook.png",
       "PackagePath": "staticwebassets\\assets\\images\\facebook.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\googleplus.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\googleplus.png",
       "PackagePath": "staticwebassets\\assets\\images\\googleplus.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\gyn.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\gyn.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\gyn.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\icon1.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\icon1.png",
       "PackagePath": "staticwebassets\\assets\\images\\icon1.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\icon2.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\icon2.png",
       "PackagePath": "staticwebassets\\assets\\images\\icon2.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\icon3.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\icon3.png",
       "PackagePath": "staticwebassets\\assets\\images\\icon3.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\icon4.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\icon4.png",
       "PackagePath": "staticwebassets\\assets\\images\\icon4.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\linkedin.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\linkedin.png",
       "PackagePath": "staticwebassets\\assets\\images\\linkedin.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\localizacao.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\localizacao.png",
       "PackagePath": "staticwebassets\\assets\\images\\localizacao.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\location.webp",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\location.webp",
       "PackagePath": "staticwebassets\\assets\\images\\location.webp"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\medalha.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\medalha.png",
       "PackagePath": "staticwebassets\\assets\\images\\medalha.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\menu.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\menu.png",
       "PackagePath": "staticwebassets\\assets\\images\\menu.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\nurse.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\nurse.png",
       "PackagePath": "staticwebassets\\assets\\images\\nurse.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\person.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\person.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\person.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\pinterest.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\pinterest.png",
       "PackagePath": "staticwebassets\\assets\\images\\pinterest.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\quote.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\quote.png",
       "PackagePath": "staticwebassets\\assets\\images\\quote.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\relogio.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\relogio.png",
       "PackagePath": "staticwebassets\\assets\\images\\relogio.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\share.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\share.png",
       "PackagePath": "staticwebassets\\assets\\images\\share.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\stomatology.jpeg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\stomatology.jpeg",
       "PackagePath": "staticwebassets\\assets\\images\\stomatology.jpeg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\telefone.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\telefone.png",
       "PackagePath": "staticwebassets\\assets\\images\\telefone.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\twitter.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\twitter.png",
       "PackagePath": "staticwebassets\\assets\\images\\twitter.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\images\\web.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\images\\web.png",
       "PackagePath": "staticwebassets\\assets\\images\\web.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\assets\\js\\script.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\assets\\js\\script.js",
       "PackagePath": "staticwebassets\\assets\\js\\script.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\css\\account.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\account.css",
       "PackagePath": "staticwebassets\\css\\account.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\css\\manage.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\manage.css",
       "PackagePath": "staticwebassets\\css\\manage.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\css\\privacy.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\privacy.css",
       "PackagePath": "staticwebassets\\css\\privacy.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\css\\sidebar.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\sidebar.css",
       "PackagePath": "staticwebassets\\css\\sidebar.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\arroba.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\arroba.png",
       "PackagePath": "staticwebassets\\images\\arroba.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\balao.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\balao.png",
       "PackagePath": "staticwebassets\\images\\balao.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\bg.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\bg.jpg",
       "PackagePath": "staticwebassets\\images\\bg.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\carta.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\carta.png",
       "PackagePath": "staticwebassets\\images\\carta.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\check.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\check.png",
       "PackagePath": "staticwebassets\\images\\check.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\clinic.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\clinic.jpg",
       "PackagePath": "staticwebassets\\images\\clinic.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dep1.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dep1.jpg",
       "PackagePath": "staticwebassets\\images\\dep1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dep2.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dep2.jpg",
       "PackagePath": "staticwebassets\\images\\dep2.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dep3.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dep3.jpg",
       "PackagePath": "staticwebassets\\images\\dep3.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dep4.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dep4.jpg",
       "PackagePath": "staticwebassets\\images\\dep4.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dep5.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dep5.jpg",
       "PackagePath": "staticwebassets\\images\\dep5.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dep6.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dep6.jpg",
       "PackagePath": "staticwebassets\\images\\dep6.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dr1.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dr1.jpg",
       "PackagePath": "staticwebassets\\images\\dr1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dr3.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dr3.png",
       "PackagePath": "staticwebassets\\images\\dr3.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\dr4.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\dr4.jpg",
       "PackagePath": "staticwebassets\\images\\dr4.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\estrela.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\estrela.png",
       "PackagePath": "staticwebassets\\images\\estrela.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\facebook.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\facebook.png",
       "PackagePath": "staticwebassets\\images\\facebook.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\googleplus.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\googleplus.png",
       "PackagePath": "staticwebassets\\images\\googleplus.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\gyn.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\gyn.jpg",
       "PackagePath": "staticwebassets\\images\\gyn.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\icon1.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\icon1.png",
       "PackagePath": "staticwebassets\\images\\icon1.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\icon2.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\icon2.png",
       "PackagePath": "staticwebassets\\images\\icon2.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\icon3.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\icon3.png",
       "PackagePath": "staticwebassets\\images\\icon3.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\icon4.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\icon4.png",
       "PackagePath": "staticwebassets\\images\\icon4.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\linkedin.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\linkedin.png",
       "PackagePath": "staticwebassets\\images\\linkedin.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\localizacao.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\localizacao.png",
       "PackagePath": "staticwebassets\\images\\localizacao.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\location.webp",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\location.webp",
       "PackagePath": "staticwebassets\\images\\location.webp"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\medalha.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\medalha.png",
       "PackagePath": "staticwebassets\\images\\medalha.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\menu.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\menu.png",
       "PackagePath": "staticwebassets\\images\\menu.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\nurse.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\nurse.png",
       "PackagePath": "staticwebassets\\images\\nurse.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\person.jpg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\person.jpg",
       "PackagePath": "staticwebassets\\images\\person.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\pinterest.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\pinterest.png",
       "PackagePath": "staticwebassets\\images\\pinterest.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\quote.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\quote.png",
       "PackagePath": "staticwebassets\\images\\quote.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\relogio.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\relogio.png",
       "PackagePath": "staticwebassets\\images\\relogio.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\share.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\share.png",
       "PackagePath": "staticwebassets\\images\\share.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\stomatology.jpeg",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\stomatology.jpeg",
       "PackagePath": "staticwebassets\\images\\stomatology.jpeg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\telefone.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\telefone.png",
       "PackagePath": "staticwebassets\\images\\telefone.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\twitter.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\twitter.png",
       "PackagePath": "staticwebassets\\images\\twitter.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\images\\web.png",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\images\\web.png",
       "PackagePath": "staticwebassets\\images\\web.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\HospitalManagement\\HospitalManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\dell\\Documents\\Spitali\\hospitalManagment\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HospitalManagement.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HospitalManagement.Microsoft.AspNetCore.StaticWebAssets.props",
