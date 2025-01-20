@@ -20,17 +20,20 @@ namespace HospitalManagement.Areas.Identity.Pages.Account
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IAuthenticationSchemeProvider _authenticationSchemeProvider;
+        private readonly ApplicationDbContext _context;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IAuthenticationSchemeProvider authenticationSchemeProvider)
+            IAuthenticationSchemeProvider authenticationSchemeProvider,
+             ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _authenticationSchemeProvider = authenticationSchemeProvider;
+             _context = context;
         }
 
         [BindProperty]
@@ -74,13 +77,12 @@ namespace HospitalManagement.Areas.Identity.Pages.Account
         {
             ReturnUrl = returnUrl ?? Url.Content("~/");
 
-            // Fetch external login providers (like Google, Facebook)
             ExternalLogins = (await _authenticationSchemeProvider.GetAllSchemesAsync())
                              .Where(s => s.DisplayName != null)
                              .ToList();
         }
 
-       public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+  public async Task<IActionResult> OnPostAsync(string returnUrl = null)
 {
     returnUrl ??= Url.Content("~/");
 
@@ -101,7 +103,6 @@ namespace HospitalManagement.Areas.Identity.Pages.Account
         {
             _logger.LogInformation("User created a new account with password.");
 
-            // Assign the "Patient" role to the user
             var roleResult = await _userManager.AddToRoleAsync(user, "Patient");
 
             if (!roleResult.Succeeded)
@@ -111,15 +112,28 @@ namespace HospitalManagement.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
 
-                // If adding the role fails, delete the user to avoid inconsistent state
+               
                 await _userManager.DeleteAsync(user);
                 return Page();
             }
 
-            // Automatically sign in the user
+    
+            var patient = new Patient
+            {
+                Id = user.Id, 
+                FullName = Input.FullName,
+                Surname = Input.Surname,
+                Email = Input.Email,
+                MedicalHistory = Input.MedicalHistory
+            };
+
+         
+            _context.Patients.Add(patient);
+            await _context.SaveChangesAsync();
+
+           
             await _signInManager.SignInAsync(user, isPersistent: false);
 
-            // Redirect to the returnUrl (if provided) or to the home page
             return LocalRedirect(returnUrl);
         }
 
@@ -129,13 +143,14 @@ namespace HospitalManagement.Areas.Identity.Pages.Account
         }
     }
 
-    // Re-fetch external logins if validation fails
+   
     ExternalLogins = (await _authenticationSchemeProvider.GetAllSchemesAsync())
                      .Where(s => s.DisplayName != null)
                      .ToList();
 
     return Page();
 }
+
 
     }
 }

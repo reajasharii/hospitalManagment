@@ -17,397 +17,399 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HospitalManagement
 build_property.RootNamespace = HospitalManagement
-build_property.ProjectDir = C:\Users\dell\Documents\Spitali\hospitalManagment\
+build_property.ProjectDir = C:\Users\User\Desktop\HospitalManagement\HospitalManagement\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\dell\Documents\Spitali\hospitalManagment
+build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\HospitalManagement\HospitalManagement
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Lockout.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/Error.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/CreateAdmin.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/CreateDoctor.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/CreateDoctor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRG9jdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/CreatePatient.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/CreatePatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUGF0aWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/DeleteAdmin.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/DeleteAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/DeleteDoctor.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/DeleteDoctor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlRG9jdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/DeletePatient.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/DeletePatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlUGF0aWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/DoctorAccountView.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/DoctorAccountView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRG9jdG9yQWNjb3VudFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/EditAdmin.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/EditAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFkbWluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/EditDoctor.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/EditDoctor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdERvY3Rvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/EditPatient.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/EditPatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFBhdGllbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/ManageAdmins.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/ManageAdmins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlQWRtaW5zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/ManageConnections.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/ManageConnections.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlQ29ubmVjdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/ManageDoctors.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/ManageDoctors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlRG9jdG9ycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/ManagePatients.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/ManagePatients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlUGF0aWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Admin/MyAccount.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Admin/MyAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTXlBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Appointments/Create.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Appointments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Appointments/Delete.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Appointments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Appointments/Index.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Appointments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Contact/Create.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Contact/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Contact/Delete.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Contact/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Contact/Details.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Contact/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Contact/Index.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Departments/Create.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Departments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Departments/Delete.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Departments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Departments/Edit.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Departments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Departments/index.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Departments/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Doctor/CreatePatient.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/CreatePatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXENyZWF0ZVBhdGllbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Doctor/DeletePatient.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/DeletePatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERlbGV0ZVBhdGllbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Doctor/EditPatient.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/EditPatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEVkaXRQYXRpZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Doctor/ManagePatients.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/ManagePatients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXE1hbmFnZVBhdGllbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Doctor/MyAccount.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/MyAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXE15QWNjb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Doctor/SendNote.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Doctor/SendNote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXFNlbmROb3RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Home/Index.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Home/Privacy.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaff/Create.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/HospitalStaff/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZlxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaff/Delete.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/HospitalStaff/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZlxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaff/Edit.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/HospitalStaff/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZlxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/HospitalStaff/Index.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/HospitalStaff/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxTdGFmZlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/MedicalServices/Create.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/MedicalServices/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbFNlcnZpY2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/MedicalServices/Delete.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/MedicalServices/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbFNlcnZpY2VzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/MedicalServices/Edit.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/MedicalServices/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbFNlcnZpY2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/MedicalServices/Index.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/MedicalServices/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbFNlcnZpY2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Patient/ConnectToDoctor.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Patient/ConnectToDoctor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxDb25uZWN0VG9Eb2N0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Patient/EditPatient.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Patient/EditPatient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxFZGl0UGF0aWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Patient/PatientAccountView.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Patient/PatientAccountView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxQYXRpZW50QWNjb3VudFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Patient/ViewNotes.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Patient/SubmitFeedBack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxTdWJtaXRGZWVkQmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Patient/ViewNotes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxWaWV3Tm90ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Shared/Error.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Shared/SideBar/AdminSideBar.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Shared/SideBar/AdminSideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNpZGVCYXJcQWRtaW5TaWRlQmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Shared/SideBar/DoctorSideBar.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Shared/SideBar/DoctorSideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNpZGVCYXJcRG9jdG9yU2lkZUJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Shared/SideBar/PatientSideBar.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Shared/SideBar/PatientSideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNpZGVCYXJcUGF0aWVudFNpZGVCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Shared/_AuthLayout.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Shared/_AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/_ViewImports.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/_ViewStart.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/Shared/_Layout.cshtml]
+[C:/Users/User/Desktop/HospitalManagement/HospitalManagement/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ljvfyrkojo
