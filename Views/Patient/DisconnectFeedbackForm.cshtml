@@ -1,0 +1,19 @@
+@model HospitalManagement.ViewModels.FeedbackViewModel
+
+<h2>Submit Feedback</h2>
+
+<form asp-action="SubmitFeedback" method="post">
+    <input type="hidden" name="DoctorId" value="@Model.DoctorId" />
+    <input type="hidden" name="PatientId" value="@Model.PatientId" />
+
+    <div class="mb-3">
+        <label for="FeedbackText" class="form-label">Reason for Disconnecting</label>
+        <textarea id="FeedbackText" name="FeedbackText" class="form-control" rows="5" placeholder="Enter your reason here..." required></textarea>
+    </div>  
+
+    <button type="submit" class="btn btn-danger">Submit Feedback and Disconnect</button>
+</form>
+
+<hr />
+
+<a asp-action="ConnectToDoctor" class="btn btn-secondary">Back to Connect Doctor</a>
