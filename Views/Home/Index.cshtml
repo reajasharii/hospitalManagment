@@ -1,4 +1,4 @@
-﻿<link type="text/css" rel="stylesheet" href="~/assets/css/style.css">
+﻿@* <link type="text/css" rel="stylesheet" href="~/assets/css/style.css">
     
 
 <body>
@@ -169,6 +169,191 @@
                                     <img src="assets/images/dr4.jpg">
                                     <div class="section-director--name">Odeta Çoçaj</div>
                                     <div class="section-director--role">Pediatre</div>
+                                    <div class="section-director--media">
+                                        <a href="#"><img src="assets/images/linkedin.png" style="width: 11px"></a>
+                                        <a href="#"><img src="assets/images/twitter.png" style="width: 11px"></a>
+                                        <a href="#"><img src="assets/images/facebook.png" style="width: 7px"></a>
+                                        <a href="#"><img src="assets/images/googleplus.png" style="width: 15px"></a>
+                                        <a href="#"><img src="assets/images/pinterest.png" style="width: 11px"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body> *@
+<link type="text/css" rel="stylesheet" href="~/assets/css/style.css">
+
+<body>
+
+    <main>
+        <section class="banner">
+            <div class="sliders">
+                <div class="slide">
+                    <div class="slideArea" id="slideArea1">
+                        <h1>
+                            <span>HMS</span>
+                        </h1>
+                        <a class="button" href="@Url.Action("Index", "AboutUsContent")">About Us</a>
+                    </div>
+            </div>
+        </section>
+
+       <section class="default light" id="aboutus">
+    <div class="section-title">About Us</div>
+    <div class="section-desc">Who are we?</div>
+    <div class="section-body">
+        <div class="section-aboutUs">
+            <div class="section-aboutUs-left">
+                Our clinic also provides pediatric neurological services, obstetric gynecological care, urological, cardiological, pulmonological, gastroenterological, radiological, psychological, allergological services, and family medicine.
+                <br />
+                <a class="button" href="@Url.Action("Index", "AboutUsContent")">Read more about us</a>
+            </div>
+            <div class="section-aboutUs-right">
+                <img src="~/assets/images/dep4.jpg" alt="Happy People">
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="default dark" id="services">
+            <div class="section-title">What are our services and qualities</div>
+            <div class="section-desc">Your concerns, our responsibility</div>
+            <div class="section-body">
+                <div class="section-services">
+                    <div class="section-service">
+                        <img src="./assets/images/icon1.png" />
+                        <h4>Professional Staff</h4>
+                        <p>Our staff is composed of specialists in various fields, with a high academic level and many years of experience.</p>
+                    </div>
+                    <div class="section-service">
+                        <img src="./assets/images/icon2.png" />
+                        <h4>Emergency Cases</h4>
+                        <p>All you need is one phone call to our emergency, and our medical staff for emergencies will provide assistance and transportation to our hospital.</p>
+                    </div>
+                    <div class="section-service">
+                        <img src="./assets/images/icon3.png" />
+                        <h4>Qualified Doctors</h4>
+                        <p>Qualified doctors in their respective fields, deeply knowledgeable and with a remarkable professional career.</p>
+                    </div>
+                    <div class="section-service">
+                        <img src="./assets/images/icon4.png" />
+                        <h4>24/7 Maximum Care</h4>
+                        <p>For hospitalized patients, continuous supervision by on-duty doctors and accompanying staff. Always with you and near you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <section class="default light" id="departments">
+    <div class="section-title">Departments</div>
+    <div class="section-body">
+        <div class="section-projects">
+            <div class="section-projects--photos">
+                <div class="section-projects--photo">
+                    <div class="section-projects--photoArea">
+                        <div class="section-projects--photoInfo">
+                            <h3>Oncology</h3>
+                            <a href="@Url.Action("Create", "Appointments")" class="button">Assign the Appointment</a>
+                        </div>
+                        <img src="./assets/images/dep1.jpg" />
+                    </div>
+                </div>
+                <div class="section-projects--photo">
+                    <div class="section-projects--photoArea">
+                        <div class="section-projects--photoInfo">
+                            <h3>Cardiology</h3>
+                            <a href="@Url.Action("Create", "Appointments")" class="button">Assign the Appointment</a>
+                        </div>
+                        <img src="./assets/images/dep2.jpg" />
+                    </div>
+                </div>
+                <div class="section-projects--photo">
+                    <div class="section-projects--photoArea">
+                        <div class="section-projects--photoInfo">
+                            <h3>Orthopedics</h3>
+                            <a href="@Url.Action("Create", "Appointments")" class="button">Assign the Appointment</a>
+                        </div>
+                        <img src="./assets/images/dep3.jpg" />
+                    </div>
+                </div>
+                <div class="section-projects--photo">
+                    <div class="section-projects--photoArea">
+                        <div class="section-projects--photoInfo">
+                            <h3>Radiology</h3>
+                            <a href="@Url.Action("Create", "Appointments")" class="button">Assign the Appointment</a>
+                        </div>
+                        <img src="assets/images/gyn.jpg" />
+                    </div>
+                </div>
+                <div class="section-projects--photo">
+                    <div class="section-projects--photoArea">
+                        <div class="section-projects--photoInfo">
+                            <h3>Gastroenterology</h3>
+                            <a href="@Url.Action("Create", "Appointments")" class="button">Assign the Appointment</a>
+                        </div>
+                        <img src="assets/images/stomatology.jpeg" />
+                    </div>
+                </div>
+                <div class="section-projects--photo">
+                    <div class="section-projects--photoArea">
+                        <div class="section-projects--photoInfo">
+                            <h3>Pediatrics</h3>
+                            <a href="@Url.Action("Create", "Appointments")" class="button">Assign the Appointment</a>
+                        </div>
+                        <img src="assets/images/dep6.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="default dark bg-directors" id="doctors">
+            <div class="section-directorsArea">
+                <div class="section-title">Doctors</div>
+                <div class="section-desc">
+                    Professional Staff
+                    Our staff is composed of specialists in various fields, with a high academic level and many years of experience.
+                </div>
+                <div class="section-body">
+                    <div class="section-directors">
+                        <div class="sliders">
+                            <div class="slide">
+                                <div class="slideArea" id="slideArea1">
+                                    <img src="assets/images/dr1.jpg">
+                                    <div class="section-director--name">Dr. Blerta Isufi</div>
+                                    <div class="section-director--role">Family Doctor</div>
+                                    <div class="section-director--media">
+                                        <a href="#"><img src="assets/images/linkedin.png" style="width: 11px"></a>
+                                        <a href="#"><img src="assets/images/twitter.png" style="width: 11px"></a>
+                                        <a href="#"><img src="assets/images/facebook.png" style="width: 7px"></a>
+                                        <a href="#"><img src="assets/images/googleplus.png" style="width: 15px"></a>
+                                        <a href="#"><img src="assets/images/pinterest.png" style="width: 11px"></a>
+                                    </div>
+                                </div>
+                            </div><div class="slide">
+                                <div class="slideArea" id="slideArea2">
+                                    <img src="assets/images/dr3.png">
+                                    <div class="section-director--name">Dr. Hana Macula</div>
+                                    <div class="section-director--role">Dentist</div>
+                                    <div class="section-director--media">
+                                        <a href="#"><img src="assets/images/linkedin.png" style="width: 11px"></a>
+                                        <a href="#"><img src="assets/images/twitter.png" style="width: 11px"></a>
+                                        <a href="#"><img src="assets/images/facebook.png" style="width: 7px"></a>
+                                        <a href="#"><img src="assets/images/googleplus.png" style="width: 15px"></a>
+                                        <a href="#"><img src="assets/images/pinterest.png" style="width: 11px"></a>
+                                    </div>
+                                </div>
+                            </div><div class="slide">
+                                <div class="slideArea" id="slideArea3">
+                                    <img src="assets/images/dr4.jpg">
+                                    <div class="section-director--name">Odeta Çoçaj</div>
+                                    <div class="section-director--role">Pediatrician</div>
                                     <div class="section-director--media">
                                         <a href="#"><img src="assets/images/linkedin.png" style="width: 11px"></a>
                                         <a href="#"><img src="assets/images/twitter.png" style="width: 11px"></a>
