@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HospitalManagement.Data;
@@ -611,29 +612,49 @@ namespace HospitalManagement.Controllers
 
             return RedirectToAction("ManagePatients");
         }
-        public async Task<IActionResult> ManageConnections()
+       public async Task<IActionResult> ManageConnections()
+{
+    var connections = await _context.PatientDoctors
+        .Select(pd => new ConnectionViewModel
         {
-
-            var connections = await _context.PatientDoctors
-                .Select(pd => new ConnectionViewModel
-                {
-                    DoctorId = pd.DoctorId,
-                    DoctorName = pd.DoctorFullName,
-                    PatientName = pd.PatientFullName
-                })
-                .ToListAsync();
+            DoctorId = pd.DoctorId,
+            DoctorName = pd.DoctorFullName,
+            PatientName = pd.PatientFullName
+        })
+        .ToListAsync();
 
 
-            var viewModel = new ManageConnectionsViewModel
-            {
-                Connections = connections,
-                AvailableDoctors = await _context.Doctors.ToListAsync(),
-                CurrentPatients = await _userManager.Users.ToListAsync()
-            };
+    var patientRole = await _context.Roles.FirstOrDefaultAsync(r => r.Name == "Patient");
+    if (patientRole == null)
+    {
+       
+        return View(new ManageConnectionsViewModel
+        {
+            Connections = connections,
+            AvailableDoctors = await _context.Doctors.ToListAsync(),
+            CurrentPatients = new List<ApplicationUser>()
+        });
+    }
 
-            return View(viewModel);
-        }
+ 
+    var patientIds = await _context.UserRoles
+        .Where(ur => ur.RoleId == patientRole.Id)
+        .Select(ur => ur.UserId)
+        .ToListAsync();
 
+    var currentPatients = await _userManager.Users
+        .Where(u => patientIds.Contains(u.Id))
+        .ToListAsync();
+
+    var viewModel = new ManageConnectionsViewModel
+    {
+        Connections = connections,
+        AvailableDoctors = await _context.Doctors.ToListAsync(),
+        CurrentPatients = currentPatients // Only patients are included here
+    };
+
+    return View(viewModel);
+}
 
 
 
