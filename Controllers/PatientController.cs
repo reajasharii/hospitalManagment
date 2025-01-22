@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using HospitalManagement.Data;
 using HospitalManagement.Models;
 using HospitalManagement.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -29,8 +30,34 @@ public class PatientController : Controller
     }
 
  
-    [HttpGet]
-    public async Task<IActionResult> PatientAccountView()
+[HttpGet]
+[Authorize]
+public async Task<IActionResult> PatientAccountView()
+{
+    var user = await _userManager.GetUserAsync(User);
+    if (user == null)
+    {
+        return NotFound();
+    }
+
+
+    var model = new EditPatientAccountViewModel
+    {
+        FullName = user.FullName,
+        Surname = user.Surname,
+        Email = user.Email,
+        MedicalHistory = user.MedicalHistory  // Optional
+    };
+
+    return View(model);
+}
+
+[HttpPost]
+[Authorize]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> PatientAccountView(EditPatientAccountViewModel model)
+{
+    if (ModelState.IsValid)
     {
         var user = await _userManager.GetUserAsync(User);
         if (user == null)
@@ -38,48 +65,34 @@ public class PatientController : Controller
             return NotFound();
         }
 
-        var model = new EditAccountViewModel
+       
+        user.FullName = model.FullName;
+        user.Surname = model.Surname;
+        user.Email = model.Email;
+        user.MedicalHistory = model.MedicalHistory;
+
+        var result = await _userManager.UpdateAsync(user);
+        if (result.Succeeded)
         {
-            FullName = user.FullName,
-            Surname = user.Surname,
-            Email = user.Email
-        };
-
-        return View(model);
-    }
-
-   
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> PatientAccountView(EditAccountViewModel model)
-    {
-        if (ModelState.IsValid)
-        {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            user.FullName = model.FullName;
-            user.Surname = model.Surname;
-            user.Email = model.Email;
-
-            var result = await _userManager.UpdateAsync(user);
-            if (result.Succeeded)
-            {
-                TempData["SuccessMessage"] = "Account updated successfully!";
-                return RedirectToAction("PatientAccountView");
-            }
-
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError(string.Empty, error.Description);
-            }
+            TempData["SuccessMessage"] = "Account updated successfully!";
+            return RedirectToAction("PatientAccountView");
         }
 
-        return View(model);
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError(string.Empty, error.Description);
+        }
     }
+
+    return View(model);
+}
+
+
+
+
+
+
+
 
     
      
