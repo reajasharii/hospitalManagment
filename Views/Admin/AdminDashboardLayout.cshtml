@@ -1,0 +1,98 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-9">
+            <div class="container mt-5">
+                <h1 class="mb-4">Welcome back, @User.Identity.Name!</h1>
+
+                 <div class="row text-center mb-5">
+                    <div class="col-md-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5>Total Patients</h5>
+                                <h2>150</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5>Appointments Today</h5>
+                                <h2>12</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5>Doctors Online</h5>
+                                <h2>8</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5>Feedbacks Received</h5>
+                                <h2>25</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="row">
+                   
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h5>Recent Activity</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><strong>Dr. Smith</strong> added a new note for John Doe.</li>
+                                    <li>Appointment with <strong>Dr. Jane Doe</strong> confirmed for Jan 30, 2025.</li>
+                                    <li><strong>Anna Johnson</strong> connected with Dr. Hana Macula.</li>
+                                    <li><strong>New article</strong> added to Health Resources.</li>
+                                </ul>
+                                <a href="#" class="btn btn-link">View All Activity</a>
+                            </div>
+                        </div>
+                    </div>
+
+              
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-success text-white">
+                                <h5>Upcoming Appointments</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <strong>John Doe</strong> - Jan 25, 2025, at 10:00 AM
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Jane Smith</strong> - Jan 26, 2025, at 2:00 PM
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Anna Johnson</strong> - Jan 27, 2025, at 9:30 AM
+                                    </li>
+                                </ul>
+                                <a href="@Url.Action("Appointments", "Admin")" class="btn btn-link mt-2">View All Appointments</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Styles {
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+}

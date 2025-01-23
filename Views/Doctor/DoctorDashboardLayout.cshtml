@@ -1,0 +1,134 @@
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-9">
+            <div class="container mt-5">
+                <h1 class="mb-4">Welcome back, Dr. @User.Identity.Name!</h1>
+
+                <div class="row text-center mb-5">
+                    <div class="col-md-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5>Total Patients</h5>
+                                <h2>50</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5>Appointments Today</h5>
+                                <h2>8</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5>Patients Online</h5>
+                                <h2>5</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5>Feedbacks Received</h5>
+                                <h2>15</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h5>Recent Activity</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><strong>Dr. Smith</strong> added a new note for <strong>John Doe</strong>.</li>
+                                    <li>Appointment with <strong>Jane Smith</strong> confirmed for Jan 30, 2025.</li>
+                                    <li><strong>Patient</strong> left a feedback on your consultation.</li>
+                                    <li><strong>Medical resource</strong> updated for patient education.</li>
+                                </ul>
+                                <a href="#" class="btn btn-link">View All Activity</a>
+                            </div>
+                        </div>
+                    </div>
+
+             
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-success text-white">
+                                <h5>Upcoming Appointments</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <strong>John Doe</strong> - Jan 25, 2025, at 10:00 AM
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Jane Smith</strong> - Jan 26, 2025, at 2:00 PM
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Anna Johnson</strong> - Jan 27, 2025, at 9:30 AM
+                                    </li>
+                                </ul>
+                                <a href="@Url.Action("Appointments", "Doctor")" class="btn btn-link mt-2">View All Appointments</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <div class="row">
+                  
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-warning text-dark">
+                                <h5>Assigned Patients</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><strong>John Doe</strong> - Connected for follow-up.</li>
+                                    <li><strong>Jane Smith</strong> - Initial consultation scheduled.</li>
+                                    <li><strong>Anna Johnson</strong> - Waiting for test results.</li>
+                                </ul>
+                                <a href="@Url.Action("ManagePatients", "Doctor")" class="btn btn-link">View All Patients</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Section -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-info text-white">
+                                <h5>Patient Feedback</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><strong>John Doe</strong> - "Very informative consultation, would recommend."</li>
+                                    <li><strong>Jane Smith</strong> - "Great experience, doctor was attentive."</li>
+                                    <li><strong>Anna Johnson</strong> - "Looking forward to the next consultation."</li>
+                                </ul>
+                                <a href="@Url.Action("Feedback", "Doctor")" class="btn btn-link">View All Feedback</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+}
