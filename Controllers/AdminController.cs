@@ -660,7 +660,10 @@ namespace HospitalManagement.Controllers
 
 
 
-
+ public IActionResult AdminDashboardLayout()
+    {
+        return View();
+    }
 
 
         public async Task<IActionResult> AddConnection(string selectedPatientId, string doctorId)

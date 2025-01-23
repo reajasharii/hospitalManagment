@@ -52,6 +52,15 @@ public async Task<IActionResult> PatientAccountView()
     return View(model);
 }
 
+
+public IActionResult PatientDashboardLayout()
+    {
+        return View();
+    }
+
+
+
+
 [HttpPost]
 [Authorize]
 [ValidateAntiForgeryToken]

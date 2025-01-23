@@ -7,6 +7,21 @@ html {
     padding: 0;
     box-sizing: border-box;
   }
+
+
+  /* styles.css */
+.card {
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.card-header {
+  font-weight: bold;
+}
+
   
   body {
     font-family: "Montserrat", Arial, Arial, Helvetica, sans-serif;

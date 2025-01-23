@@ -1,6 +1,9 @@
-<!-- Doctor Sidebar (DoctorSideBar.cshtml) -->
+
 <div class="sidebar">
     <ul class="list-group">
+        <li class="list-group-item">
+            <a href="@Url.Action("DoctorDashboardLayout", "Doctor")" class="text-decoration-none text-dark">Doctor Dashboar</a>
+        </li>
         <li class="list-group-item">
             <a href="@Url.Action("ManagePatients", "Doctor")" class="text-decoration-none text-dark">Connected Patients</a>
         </li>

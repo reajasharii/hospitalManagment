@@ -72,7 +72,10 @@ public async Task<IActionResult> MyAccount()
 
     return View(model);
 }
-
+public IActionResult DoctorDashboardLayout()
+    {
+        return View();
+    }
         
        [HttpPost]
 [ValidateAntiForgeryToken]

@@ -17,11 +17,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewData["IsAuthenticated"] = User.Identity?.IsAuthenticated ?? false;
         return View();
     }
 public IActionResult Contact()
 {
-    return View(); // Ky dërgon përdoruesin tek pamja 'Contact.cshtml'
+    return View(); 
 }
 
     public IActionResult Privacy()
