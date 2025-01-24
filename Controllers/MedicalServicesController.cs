@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Threading.Tasks;
 using HospitalManagement.Data;
 using HospitalManagement.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -23,15 +24,36 @@ namespace HospitalManagement.Controllers
         }
 
 
-        public IActionResult Details(int id)
+        // public IActionResult Details(int id)
+        // {
+        //     var service = _context.MedicalServices.Find(id);
+        //     if (service == null)
+        //         return NotFound();
+
+        //     return View(service);
+        // }
+    // New List method
+    public IActionResult List()
+    {
+        var services = _context.MedicalServices.ToList();
+        return View(services);
+    }
+        public async Task<IActionResult> Details(int? id)
         {
-            var service = _context.MedicalServices.Find(id);
-            if (service == null)
+            if (id == null)
+            {
                 return NotFound();
+            }
 
-            return View(service);
+            var medicalService = await _context.MedicalServices
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (medicalService == null)
+            {
+                return NotFound();
+            }
+
+            return View(medicalService);
         }
-
 
         public IActionResult Create()
         {
