@@ -67,34 +67,45 @@ namespace HospitalManagement.Areas.Identity.Pages.Account
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+{
+    returnUrl ??= Url.Content("~/");
+
+    if (ModelState.IsValid)
+    {
+        var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+        if (result.Succeeded)
         {
-            returnUrl ??= Url.Content("~/");
+            _logger.LogInformation("User logged in.");
 
-            if (ModelState.IsValid)
+             var user = await _userManager.FindByEmailAsync(Input.Email);
+
+           
+            if (await _userManager.IsInRoleAsync(user, "Admin"))
             {
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-
-                if (result.Succeeded)
-                {
-                    _logger.LogInformation("User logged in.");
-
-                    if (Url.IsLocalUrl(returnUrl))
-                    {
-                        return LocalRedirect(returnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToPage("/Index");
-                    }
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return Page();
-                }
+                return RedirectToAction("AdminDashboardLayout", "Admin");
+            }
+            else if (await _userManager.IsInRoleAsync(user, "Doctor"))
+            {
+                return RedirectToAction("DoctorDashboardLayout", "Doctor");
+            }
+            else if (await _userManager.IsInRoleAsync(user, "Patient"))
+            {
+                return RedirectToAction("PatientDashboardLayout", "Patient");
             }
 
+      
+            // return RedirectToPage("/Index");
+        }
+        else
+        {
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return Page();
         }
+    }
+
+    return Page();
+}
+
     }
 }
