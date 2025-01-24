@@ -372,6 +372,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbFNlcnZpY2VzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/dell/Documents/Spitali/hospitalManagment/Views/MedicalServices/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbFNlcnZpY2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/dell/Documents/Spitali/hospitalManagment/Views/MedicalServices/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbFNlcnZpY2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
