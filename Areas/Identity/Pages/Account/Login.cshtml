@@ -28,19 +28,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 50px 20px; /* Hapësira nga header dhe footer */
+            padding: 50px 20px; 
         }
 
         .login-box {
             width: 100%;
-            max-width: 500px; /* Përshtatur për t'u bërë më i gjerë */
+            max-width: 500px; 
             background: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hije për formën */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
             border: 1px solid #e0e0e0;
-            margin: auto; /* Qendron në qendër të ekranit */
+            margin: auto; 
         }
+
 
         h3 {
             color: #007bff;
@@ -60,6 +61,10 @@
             font-size: 14px;
             color: #555;
         }
+         main {
+        flex: 1; 
+    }
+
 
         .btn-info {
             background-color: #007bff;
@@ -131,7 +136,7 @@
                 <div class="forgot-links mt-3">
                     <p><a id="forgot-password" asp-page="./ForgotPassword" class="text-info">Forgot your password?</a></p>
                     <p><a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="text-info">Register as a new user</a></p>
-                    <p><a id="resend-confirmation" asp-page="./ResendEmailConfirmation" class="text-info">Resend email confirmation</a></p>
+                   
                 </div>
             </form>
         </div>
@@ -144,3 +149,22 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+<script>
+    function adjustFooterPosition() {
+        const footer = document.querySelector('.footer');
+        const contentHeight = document.body.offsetHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (contentHeight < viewportHeight) {
+            footer.style.position = 'absolute';
+            footer.style.bottom = '0';
+        } else {
+            footer.style.position = 'relative';
+        }
+    }
+
+
+    window.addEventListener('load', adjustFooterPosition);
+    window.addEventListener('resize', adjustFooterPosition);
+</script>
+

@@ -46,72 +46,90 @@ public async Task<IActionResult> ManagePatients()
 }
         
         [Authorize]
-public async Task<IActionResult> MyAccount()
-{
-    var user = await _userManager.GetUserAsync(User);
-    if (user == null)
-    {
-        return NotFound();
-    }
 
-    var doctor = await _context.Doctors.FirstOrDefaultAsync(d => d.Id == user.Id);
-    if (doctor == null)
-    {
-        return NotFound();
-    }
-
-    var model = new EditAccountViewModel
-    {
-        FullName = doctor.FullName,
-        Surname = doctor.Surname,
-        Email = doctor.Email,
-        DateOfBirth = doctor.DateOfBirth,
-        Specialty = doctor.Specialty,
-        LicenseNumber = doctor.LicenseNumber
-    };
-
-    return View(model);
-}
 public IActionResult DoctorDashboardLayout()
     {
         return View();
     }
         
-       [HttpPost]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> MyAccount(EditAccountViewModel model)
-{
-    if (ModelState.IsValid)
+  [HttpGet]
+    public async Task<IActionResult> MyAccount()
     {
-        var user = await _userManager.GetUserAsync(User);
-        if (user == null)
-        {
-            return NotFound();
-        }
+        var userId = _userManager.GetUserId(User); // Get the logged-in user's ID
+        var doctor = await _context.Doctors.FirstOrDefaultAsync(d => d.Id == userId);
 
-        var doctor = await _context.Doctors.FirstOrDefaultAsync(d => d.Id == user.Id);
         if (doctor == null)
         {
             return NotFound();
         }
 
-        doctor.FullName = model.FullName;
-        doctor.Surname = model.Surname;
-        doctor.Email = model.Email;
-        doctor.DateOfBirth = (System.DateTime)model.DateOfBirth;
-        doctor.Specialty = model.Specialty;
-        doctor.LicenseNumber = model.LicenseNumber;
+        var model = new EditAccountViewModel
+        {
+            FullName = doctor.FullName,
+            Surname = doctor.Surname,
+            Email = doctor.Email,
+             Specialty = doctor.Specialty
+     
+        };
 
-        _context.Update(doctor);
-        await _context.SaveChangesAsync();
-
-        TempData["SuccessMessage"] = "Account updated successfully!";
-        return RedirectToAction("MyAccount");
+        return View(model);
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> MyAccount(EditAccountViewModel model)
+    {
+       if (!ModelState.IsValid)
+{
+    foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+    {
+        Console.WriteLine(error.ErrorMessage); 
+    }
     return View(model);
 }
 
+
+        var userId = _userManager.GetUserId(User); // Get the logged-in user's ID
+        var doctor = await _context.Doctors.FirstOrDefaultAsync(d => d.Id == userId);
+
+        if (doctor == null)
+        {
+            return NotFound();
+        }
+
+       
+        doctor.FullName = model.FullName;
+        doctor.Surname = model.Surname;
+        doctor.Specialty = model.Specialty;
+      
+
+       
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        user.Email = model.Email;
+        user.UserName = model.Email;
+
+        var identityResult = await _userManager.UpdateAsync(user);
+
+        if (!identityResult.Succeeded)
+        {
+            foreach (var error in identityResult.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+            return View(model);
+        }
+
+        _context.Entry(doctor).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+
+        TempData["SuccessMessage"] = "Your account has been updated successfully!";
+        return RedirectToAction(nameof(MyAccount));
+    }
 
 [HttpGet]
 public async Task<IActionResult> EditPatient(string id)
@@ -212,7 +230,7 @@ public async Task<IActionResult> DeletePatient(string id)
         return Forbid(); 
     }
 
-    // Fetch the patient's data
+
     var patient = await _context.Patients.FindAsync(id);
     if (patient == null)
     {

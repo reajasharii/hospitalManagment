@@ -8,7 +8,7 @@ namespace HospitalManagement.Models
         public required string FirstName { get; set; }
         public required string LastName { get; set; }
         public required DateTime AppointmentDate { get; set; }
-        public string? Reason { get; set; } // Nullable Reason for the visit
+        public string? Reason { get; set; } 
         public required string Department { get; set; }
     }
 }

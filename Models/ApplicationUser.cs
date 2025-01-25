@@ -5,7 +5,7 @@ namespace HospitalManagement.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        // Custom properties for your user
+       
          [Required]
         public string FullName { get; set; }
          [Required]
