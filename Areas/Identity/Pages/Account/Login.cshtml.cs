@@ -58,10 +58,9 @@ namespace HospitalManagement.Areas.Identity.Pages.Account
                 ModelState.AddModelError(string.Empty, ErrorMessage);
             }
 
-            // Sign out any external authentication schemes
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
-            // Get all external authentication schemes (e.g., Google, Facebook)
+           
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             ReturnUrl = returnUrl;
         }

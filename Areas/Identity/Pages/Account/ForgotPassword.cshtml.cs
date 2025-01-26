@@ -4,23 +4,29 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using HospitalManagement.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
+using Microsoft.Extensions.Configuration;
+using System.Configuration;
 
 public class ForgotPasswordModel : PageModel
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly IEmailSender _emailSender;
+        private readonly IConfiguration _configuration;
 
-    public ForgotPasswordModel(UserManager<ApplicationUser> userManager, IEmailSender emailSender)
-    {
-        _userManager = userManager;
-        _emailSender = emailSender;
-    }
+  public ForgotPasswordModel(UserManager<ApplicationUser> userManager, IEmailSender emailSender, IConfiguration configuration)
+{
+    _userManager = userManager;
+    _emailSender = emailSender;
+    _configuration = configuration;
+}
 
-    // Add this Email property
+    
     [BindProperty]
     public string Email { get; set; }
 
-    public async Task<IActionResult> OnPostAsync()
+     public async Task<IActionResult> OnPostAsync()
     {
         if (string.IsNullOrEmpty(Email))
         {
@@ -35,24 +41,28 @@ public class ForgotPasswordModel : PageModel
             return Page();
         }
 
-        // Generate password reset token
+     
         var token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-        // Generate the reset password URL (this URL will be used in the email)
+ 
+        var fixedEmail = _configuration["Smtp:User"];
+
+      
         var resetPasswordUrl = Url.Page(
-            "/Account/ResetPassword", 
-            pageHandler: null, 
-            values: new { email = Email, token = token }, 
+            "/Account/ResetPassword",
+            pageHandler: null,
+            values: new { email = Email, token = token },
             protocol: Request.Scheme);
 
-        // Send the reset link via email
+   
         await _emailSender.SendEmailAsync(
-            Email, 
-            "Password Reset", 
-            $"<p>Please reset your password using the following link:</p>" +
+            fixedEmail,
+            "Password Reset",
+            $"<p>Password reset requested for user: <strong>{Email}</strong>.</p>" +
+            $"<p>Click the following link to reset the password:</p>" +
             $"<a href='{resetPasswordUrl}'>Reset your password</a>");
 
-        // Show a confirmation message or redirect
+        
         TempData["SuccessMessage"] = "Password reset email has been sent.";
         return RedirectToPage("./ForgotPasswordConfirmation");
     }
